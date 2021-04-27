@@ -42,36 +42,26 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 
 ```mermaid
 classDiagram
-AerodromeReferenceType --> "0..2000" AerodromeReferenceExtensionType : +extension	
-AerodromeReferenceType --> "0..1" IataAerodromeDesignatorType : +iataDesignator	
-AerodromeReferenceType --> "0..1" LocationIndicatorType : +locationIndicator	
-AerodromeReferenceType --> "0..1" AerodromeNameType : +name	
-AerodromeReferenceType --> "0..1" GeographicalPositionType : +referencePoint	
-AerodromeReferenceType --> "0..1" HypertextReferenceType : +href	
-AircraftOperatorType --> "0..2000" AircraftOperatorExtensionType : +extension	
-AircraftOperatorType --> "0..1" AircraftOperatorDesignatorType : +designatorIcao	
-AircraftOperatorType --> "0..1" PersonOrOrganizationType : +operatingOrganization	
-AircraftType --> "0..1" CharacterStringType : +coloursAndMarkings	
-AircraftType --> "0..1" AircraftAddressType : +aircraftAddress	
-AircraftType --> "0..1" AircraftApproachCategoryType : +aircraftApproachCategory	
-AircraftType --> "0..2000" AircraftTypeType : +aircraftType	
-AircraftType --> "0..1" FlightCapabilitiesType : +capabilities	
-AircraftType --> "0..1" FormationCountType : +formationCount	
-AircraftType --> "0..1" AircraftRegistrationListType : +registration	
-AircraftType --> "0..1" WakeTurbulenceCategoryType : +wakeTurbulence	
-AircraftType --> "0..2000" AircraftExtensionType : +extension	
-AircraftTypeChoiceType --> "1..1" AircraftTypeDesignatorType : +icaoAircraftTypeDesignator	
-AircraftTypeChoiceType --> "1..1" CharacterStringType : +otherAircraftType	
-AircraftTypeType --> "0..1" CountPositiveType : +numberOfAircraft	
-AircraftTypeType --> "0..2000" AircraftTypeExtensionType : +extension	
-AircraftTypeType --> "0..1" AircraftTypeChoiceType : +type	
-AirspaceDesignatorType --> "0..1" HypertextReferenceType : +href	
-AllPackedInOneType --> "0..1" CountPositiveType : +numberOfPackages	
-AllPackedInOneType --> "0..2000" AllPackedInOneExtensionType : +extension	
-AltitudeInTransitionType --> "0..1" FlightLevelOrAltitudeChoiceType : +level	
-AltitudeInTransitionType --> "0..2000" AltitudeInTransitionExtensionType : +extension	
-AltitudeInTransitionType --> "0..1" BoundaryCrossingConditionType : +crossingCondition	
-AltitudeType --> "1..1" UomAltitudeType : +uom	
+FlightType --> "0..1" PersonOrOrganizationType : +flightPlanOriginator	
+FlightType --> "0..1" PersonOrOrganizationType : +flightPlanSubmitter	
+FlightType --> "0..1" UniversallyUniqueIdentifierType : +gufi	
+FlightType --> "0..1" PersonOrOrganizationType : +gufiOriginator	
+FlightType --> "0..1" AircraftOperatorType : +operator	
+FlightType --> "0..2000" FlightExtensionType : +extension	
+FlightType --> "0..1" CharacterStringType : +remarks	
+FlightType --> "0..1" AircraftType : +aircraft	
+FlightType --> "0..1" ArrivalType : +arrival	
+FlightType --> "0..2000" DangerousGoodsType : +dangerousGoods	
+FlightType --> "0..1" DepartureType : +departure	
+FlightType --> "0..1" FlightEmergencyType : +emergency	
+FlightType --> "0..1" EnRouteType : +enRoute	
+FlightType --> "0..2000" FlightConstraintType : +flightConstraint	
+FlightType --> "0..1" FlightIdentificationType : +flightIdentification	
+FlightType --> "0..1" TypeOfFlightType : +flightType	
+FlightType --> "0..1" RadioCommunicationFailureType : +radioCommunicationFailure	
+FlightType --> "0..1" RouteTrajectoryGroupContainerType : +routeTrajectoryGroup	
+FlightType --> "0..1" SpecialHandlingReasonCodeListType : +specialHandling	
+FlightType --> "0..1" SupplementaryDataType : +supplementaryData
 class WakeTurbulenceCategoryType{
 <<enumeration>>	
 L	

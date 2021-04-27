@@ -42,13 +42,15 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 
 ```mermaid
 classDiagram
-class WakeTurbulenceCategoryType{	
+class WakeTurbulenceCategoryType{
+<<enumeration>>	
 L	
 M	
 H	
 J	
 }
-class ZeroBearingTypeType{	
+class ZeroBearingTypeType{
+<<enumeration>>	
 TRUE_NORTH	
 MAGNETIC_NORTH	
 }			

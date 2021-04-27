@@ -18,7 +18,10 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label
 ```
 
+
+
+
 ```mermaid
 classDiagram
-Flight : extension FlightExtension [0..2000] 
+Flight : +FlightExtension extension[0..2000]
 ```

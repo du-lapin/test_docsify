@@ -1,6 +1,4 @@
-# FICHES MEDICALES
-
-![Image](.//media/medecins.jpg)
+# Test
 
 > LES MÉDECINS
 >
@@ -18,6 +16,3 @@
 >
 >
 > Jean de La Fontaine, Fables, Livre V
-
-(*) Les médecins - Les Fables de La Fontaine / dessins originaux de Grandville (1837-1838). Dessins extraits de l'album (cote BmN : Rés. 4288). Voir l'exposition virtuelle : grandville.nancy.fr
-https://www.flickr.com/photos/bmnstanislas/15607899145/in/photostream/

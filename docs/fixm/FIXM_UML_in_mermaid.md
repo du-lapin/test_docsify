@@ -25,7 +25,7 @@ Class08 <--> C2: Cool label
 classDiagram
 class Flight{
 Flight : FlightExtension extension
-Flight : FlightExtension extension1
+Flight : FlightExtension extension2
 Flight : UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
@@ -47,9 +47,5 @@ L
 M	
 H	
 J	
-}	
-class ZeroBearingTypeType{	
-TRUE_NORTH	
-MAGNETIC_NORTH	
-}	
+}		
 ```

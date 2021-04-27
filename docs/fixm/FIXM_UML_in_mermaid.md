@@ -25,7 +25,7 @@ Class08 <--> C2: Cool label
 classDiagram
 class Flight{
 Flight : FlightExtension extension
-Flight : FlightExtension extension2
+Flight : FlightExtension extension3
 Flight : UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
@@ -42,10 +42,14 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 
 ```mermaid
 classDiagram
+class WakeTurbulenceCategoryType{	
 WakeTurbulenceCategoryType : L	
 WakeTurbulenceCategoryType : M	
 WakeTurbulenceCategoryType : H	
 WakeTurbulenceCategoryType : J	
+}	
+class ZeroBearingTypeType{	
 ZeroBearingTypeType : TRUE_NORTH	
 ZeroBearingTypeType : MAGNETIC_NORTH	
+}	
 ```

@@ -23,5 +23,5 @@ Class08 <--> C2: Cool label
 
 ```mermaid
 classDiagram
-Flight : +FlightExtension extension[0..2000]
+Flight : +FlightExtension extension
 ```

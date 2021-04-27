@@ -43,22 +43,22 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 
 ```mermaid
 classDiagram
-AerodromeReferenceType : AerodromeReferenceExtensionType[0..2000]extension	
-AerodromeReferenceType : IataAerodromeDesignatorType[0..1]iataDesignator	
-AerodromeReferenceType : LocationIndicatorType[0..1]locationIndicator	
-AerodromeReferenceType : AerodromeNameType[0..1]name	
-AerodromeReferenceType : GeographicalPositionType[0..1]referencePoint	
-AerodromeReferenceType : HypertextReferenceType[0..1]href	
-AircraftOperatorType : AircraftOperatorExtensionType[0..2000]extension	
-AircraftOperatorType : AircraftOperatorDesignatorType[0..1]designatorIcao	
-AircraftOperatorType : PersonOrOrganizationType[0..1]operatingOrganization	
-AircraftType : CharacterStringType[0..1]coloursAndMarkings	
-AircraftType : AircraftAddressType[0..1]aircraftAddress	
-AircraftType : AircraftApproachCategoryType[0..1]aircraftApproachCategory	
+AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]extension	
+AerodromeReferenceType : IataAerodromeDesignatorType [0..1]iataDesignator	
+AerodromeReferenceType : LocationIndicatorType [0..1]locationIndicator	
+AerodromeReferenceType : AerodromeNameType [0..1]name	
+AerodromeReferenceType : GeographicalPositionType [0..1]referencePoint	
+AerodromeReferenceType : HypertextReferenceType [0..1]href	
+AircraftOperatorType : AircraftOperatorExtensionType [0..2000]extension	
+AircraftOperatorType : AircraftOperatorDesignatorType [0..1]designatorIcao	
+AircraftOperatorType : PersonOrOrganizationType [0..1]operatingOrganization	
+AircraftType : CharacterStringType [0..1]coloursAndMarkings	
+AircraftType : AircraftAddressType [0..1]aircraftAddress	
+AircraftType : AircraftApproachCategoryType [0..1]aircraftApproachCategory	
 AircraftType --> "0..2000" AircraftTypeType : +aircraftType	
 AircraftType --> "0..1" FlightCapabilitiesType : +capabilities	
-AircraftType : FormationCountType[0..1]formationCount	
-AircraftType : AircraftRegistrationListType[0..1]registration	
-AircraftType : WakeTurbulenceCategoryType[0..1]wakeTurbulence	
-AircraftType : AircraftExtensionType[0..2000]extension	
+AircraftType : FormationCountType [0..1]formationCount	
+AircraftType : AircraftRegistrationListType [0..1]registration	
+AircraftType : WakeTurbulenceCategoryType [0..1]wakeTurbulence	
+AircraftType : AircraftExtensionType [0..2000]extension	
 ```

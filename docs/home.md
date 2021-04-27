@@ -2,7 +2,7 @@
 
 ```mermaid
 graph LR
-    A --- B
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAA --- BBBBBBBBBBBBBBBBBBBBBBBBBBBBB
     B-->C[fa:fa-ban forbidden]
     B-->D(fa:fa-spinner);
 ```

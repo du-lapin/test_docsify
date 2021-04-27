@@ -31,6 +31,7 @@ Flight : UniversallyUniqueIdentifier gufi
 
 ```mermaid
 classDiagram
-Flight --> "0..1"  UniversallyUniqueIdentifier : gufi
-Flight --> "0..1 gufi"  UniversallyUniqueIdentifier
+Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
+Flight --> "0..1"  PersonOrOrganisation : +gufiOriginator
+Flight --> "0..1"  AircraftOperator : +operator
 ```

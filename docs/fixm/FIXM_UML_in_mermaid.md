@@ -27,4 +27,6 @@ class Flight{
 Flight : +FlightExtension extension
 Flight : +UniversallyUniqueIdentifier gufi
 }
+Flight ---> 0..1 UniversallyUniqueIdentifier:Flight.gufi 
+
 ```

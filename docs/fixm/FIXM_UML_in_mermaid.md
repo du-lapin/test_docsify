@@ -25,8 +25,8 @@ Class08 <--> C2: Cool label
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension1
-"[0..1]" extension_FlightExtension
+FlightExtension extension2
+FlightExtension [0..1]extension
 UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi

@@ -31,6 +31,6 @@ Flight : UniversallyUniqueIdentifier gufi
 
 ```mermaid
 classDiagram
-Flight ---> 0..1 UniversallyUniqueIdentifier : gufi 
-
+Flight ---> "0..1" UniversallyUniqueIdentifier : gufi 
+Flight ---> "0..1 +gufi" UniversallyUniqueIdentifier
 ```

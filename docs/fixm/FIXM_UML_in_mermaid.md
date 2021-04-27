@@ -25,7 +25,7 @@ Class08 <--> C2: Cool label
 classDiagram
 class Flight{
 Flight : FlightExtension extension
-Flight : FlightExtension extension5
+Flight : FlightExtension extension6
 Flight : UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
@@ -48,6 +48,30 @@ AerodromeReferenceType --> "0..1" LocationIndicatorType : +locationIndicator
 AerodromeReferenceType --> "0..1" AerodromeNameType : +name	
 AerodromeReferenceType --> "0..1" GeographicalPositionType : +referencePoint	
 AerodromeReferenceType --> "0..1" HypertextReferenceType : +href	
+AircraftOperatorType --> "0..2000" AircraftOperatorExtensionType : +extension	
+AircraftOperatorType --> "0..1" AircraftOperatorDesignatorType : +designatorIcao	
+AircraftOperatorType --> "0..1" PersonOrOrganizationType : +operatingOrganization	
+AircraftType --> "0..1" CharacterStringType : +coloursAndMarkings	
+AircraftType --> "0..1" AircraftAddressType : +aircraftAddress	
+AircraftType --> "0..1" AircraftApproachCategoryType : +aircraftApproachCategory	
+AircraftType --> "0..2000" AircraftTypeType : +aircraftType	
+AircraftType --> "0..1" FlightCapabilitiesType : +capabilities	
+AircraftType --> "0..1" FormationCountType : +formationCount	
+AircraftType --> "0..1" AircraftRegistrationListType : +registration	
+AircraftType --> "0..1" WakeTurbulenceCategoryType : +wakeTurbulence	
+AircraftType --> "0..2000" AircraftExtensionType : +extension	
+AircraftTypeChoiceType --> "1..1" AircraftTypeDesignatorType : +icaoAircraftTypeDesignator	
+AircraftTypeChoiceType --> "1..1" CharacterStringType : +otherAircraftType	
+AircraftTypeType --> "0..1" CountPositiveType : +numberOfAircraft	
+AircraftTypeType --> "0..2000" AircraftTypeExtensionType : +extension	
+AircraftTypeType --> "0..1" AircraftTypeChoiceType : +type	
+AirspaceDesignatorType --> "0..1" HypertextReferenceType : +href	
+AllPackedInOneType --> "0..1" CountPositiveType : +numberOfPackages	
+AllPackedInOneType --> "0..2000" AllPackedInOneExtensionType : +extension	
+AltitudeInTransitionType --> "0..1" FlightLevelOrAltitudeChoiceType : +level	
+AltitudeInTransitionType --> "0..2000" AltitudeInTransitionExtensionType : +extension	
+AltitudeInTransitionType --> "0..1" BoundaryCrossingConditionType : +crossingCondition	
+AltitudeType --> "1..1" UomAltitudeType : +uom	
 class WakeTurbulenceCategoryType{
 <<enumeration>>	
 L	

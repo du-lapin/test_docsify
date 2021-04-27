@@ -24,10 +24,10 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 ```mermaid
 classDiagram
 class AerodromeReferenceType	
-AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]extension	
+AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]extension
 AerodromeReferenceType : IataAerodromeDesignatorType [0..1]iataDesignator	
-AerodromeReferenceType : LocationIndicatorType [0..1]locationIndicator	
-AerodromeReferenceType : AerodromeNameType [0..1]name	
-AerodromeReferenceType : GeographicalPositionType [0..1]referencePoint	
-AerodromeReferenceType : HypertextReferenceType [0..1]href	
+AerodromeReferenceType : LocationIndicatorType [0..1]locationIndicator
+AerodromeReferenceType : AerodromeNameType [0..1]name
+AerodromeReferenceType : GeographicalPositionType [0..1]referencePoint
+AerodromeReferenceType : HypertextReferenceType [0..1]href
 ```

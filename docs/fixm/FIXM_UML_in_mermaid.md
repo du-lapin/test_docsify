@@ -230,7 +230,6 @@ FlightType --> "0..1" SpecialHandlingReasonCodeListType : +specialHandling
 FlightType --> "0..1" SupplementaryDataType : +supplementaryData	
 FrequencyType --> "1..1" UomFrequencyType : +uom	
 GeographicalPositionType --> "1..1" LatLongPosType : +pos	
-GeographicalPositionType : srsName=urn:ogc:def:crs:EPSG::4326	
 GeographicalPositionType --> "0..2000" GeographicalPositionExtensionType : +extension	
 GroundSpeedType --> "1..1" UomGroundSpeedType : +uom	
 HazardClassType --> "0..2000" HazardClassExtensionType : +extension	
@@ -436,7 +435,6 @@ TrueAirspeedRangeType --> "0..1" TrueAirspeedType : +lowerSpeed
 TrueAirspeedRangeType --> "0..1" TrueAirspeedType : +upperSpeed	
 TrueAirspeedRangeType --> "0..2000" TrueAirspeedRangeExtensionType : +extension	
 TrueAirspeedType --> "1..1" UomAirspeedType : +uom	
-UniversallyUniqueIdentifierType : codeSpace=urn:uuid	
 VerticalRangeType --> "0..2000" VerticalRangeExtensionType : +extension	
 VerticalRangeType --> "0..1" FlightLevelOrAltitudeChoiceType : +lowerBound	
 VerticalRangeType --> "0..1" FlightLevelOrAltitudeChoiceType : +upperBound	

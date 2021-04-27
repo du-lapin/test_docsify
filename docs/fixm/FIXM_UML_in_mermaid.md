@@ -24,10 +24,10 @@ Class08 <--> C2: Cool label
 ```mermaid
 classDiagram
 class Flight{
-Flight : FlightExtension extension
-Flight : FlightExtension extension6
-Flight : "0..1" extension_:_FlightExtension
-Flight : UniversallyUniqueIdentifier gufi
+FlightExtension extension
+FlightExtension extension1
+"[0..1]" extension_FlightExtension
+UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
 ```

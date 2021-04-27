@@ -5,7 +5,7 @@
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension5
+FlightExtension extension6
 UniversallyUniqueIdentifier gufi
 }
 Flight : FlightExtension [0..1]extension
@@ -24,5 +24,5 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 ```mermaid
 classDiagram
 class AerodromeReferenceType	
-AerodromeReferenceType : AerodromeReferenceExtensionType _0..*_extension
+AerodromeReferenceType : AerodromeReferenceExtensionType extension
 ```

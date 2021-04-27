@@ -5,7 +5,7 @@
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension2
+FlightExtension extension3
 UniversallyUniqueIdentifier gufi
 }
 Flight : FlightExtension [0..1]extension

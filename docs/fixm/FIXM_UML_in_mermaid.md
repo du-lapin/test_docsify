@@ -23,7 +23,8 @@ Class08 <--> C2: Cool label
 
 ```mermaid
 classDiagram
-class Flight
-Flight : +FlightExtension extension[0..2000]
-Flight : +UniversallyUniqueIdentifier gufi[0..1]
+class Flight{
+Flight : +FlightExtension extension
+Flight : +UniversallyUniqueIdentifier gufi
+}
 ```

@@ -24,5 +24,5 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 ```mermaid
 classDiagram
 class AerodromeReferenceType	
-AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]extension
+AerodromeReferenceType : AerodromeReferenceExtensionType [0..*]extension
 ```

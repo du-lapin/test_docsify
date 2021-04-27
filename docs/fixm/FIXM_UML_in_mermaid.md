@@ -25,7 +25,7 @@ Class08 <--> C2: Cool label
 classDiagram
 class Flight{
 Flight : FlightExtension extension
-Flight : FlightExtension extension4
+Flight : FlightExtension extension5
 Flight : UniversallyUniqueIdentifier gufi
 }
 Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
@@ -42,6 +42,12 @@ Flight --> "0..1"  PersonOrOrganisation : +flightPlanSubmitter
 
 ```mermaid
 classDiagram
+AerodromeReferenceType --> "0..2000" AerodromeReferenceExtensionType : +extension	
+AerodromeReferenceType --> "0..1" IataAerodromeDesignatorType : +iataDesignator	
+AerodromeReferenceType --> "0..1" LocationIndicatorType : +locationIndicator	
+AerodromeReferenceType --> "0..1" AerodromeNameType : +name	
+AerodromeReferenceType --> "0..1" GeographicalPositionType : +referencePoint	
+AerodromeReferenceType --> "0..1" HypertextReferenceType : +href	
 class WakeTurbulenceCategoryType{
 <<enumeration>>	
 L	

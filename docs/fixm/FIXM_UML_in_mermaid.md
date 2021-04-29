@@ -1,17 +1,6 @@
 # FIXM UML in Mermaid
 
-
-```mermaid
-classDiagram
-class Flight{
-FlightExtension extension
-FlightExtension extension6
-UniversallyUniqueIdentifier gufi
-}
-Flight : FlightExtension [0..1]extension
-Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
-```
-
+## Address
 
 ```mermaid
 classDiagram
@@ -40,6 +29,7 @@ OnlineContactType : TextAddressType [0..1]+email
 OnlineContactType : TextAddressType [0..1]+linkage
 %% OnlineContactType : NetworkChoiceType [0..1]+network
 class NetworkChoiceType
+<<choice>> NetworkChoiceType
 NetworkChoiceType : CharacterStringType [1..1]+other
 NetworkChoiceType : TelecomNetworkTypeType [1..1]+type
 ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
@@ -47,3 +37,8 @@ ContactInformationType --> "0..1" PostalAddressType : +address
 ContactInformationType --> "0..1" OnlineContactType : +onlineContact
 OnlineContactType --> "0..1" NetworkChoiceType : +network
 ```
+
+## AeronauticalReference
+
+### SignificantPoint
+

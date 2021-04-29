@@ -32,7 +32,7 @@ class NetworkChoice
 <<choice>> NetworkChoice
 NetworkChoice : CharacterString +other
 %% NetworkChoice : TelecomNetworkType +type
-class TelecomNetworkType:::cssEnum{
+class TelecomNetworkType{
 <<enumeration>>
 AFTN
 INTERNET
@@ -61,19 +61,19 @@ class DesignatedPointType
 DesignatedPointType : DesignatedPointExtensionType [0..2000]+extension
 DesignatedPointType : HypertextReferenceType [0..1]+href
 DesignatedPointType : DesignatedPointDesignatorType [1..1]+designator
-DesignatedPointType : GeographicalPositionType [0..1]+position
+%% DesignatedPointType : GeographicalPositionType [0..1]+position
 class NavaidType
 NavaidType : NavaidExtensionType [0..2000]+extension
 NavaidType : NavaidDesignatorType [1..1]+designator
 NavaidType : HypertextReferenceType [0..1]+href
 NavaidType : NavaidServiceTypeType [0..1]+navaidServiceType
-NavaidType : GeographicalPositionType [0..1]+position
+%% NavaidType : GeographicalPositionType [0..1]+position
 class RelativePointType
 RelativePointType : BearingType [1..1]+bearing
 RelativePointType : DistanceType [1..1]+distance
 RelativePointType : RelativePointExtensionType [0..2000]+extension
-RelativePointType : GeographicalPositionType [0..1]+position
-RelativePointType : NavaidType [1..1]+referencePoint
+%% RelativePointType : GeographicalPositionType [0..1]+position
+%% RelativePointType : NavaidType [1..1]+referencePoint
 class GeographicalPositionType
 GeographicalPositionType : LatLongPosType [1..1]+pos
 %% GeographicalPositionType : urn:ogc:def:crs:EPSG::4326 srsName
@@ -83,11 +83,16 @@ AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]+extension
 AerodromeReferenceType : IataAerodromeDesignatorType [0..1]+iataDesignator
 AerodromeReferenceType : LocationIndicatorType [0..1]+locationIndicator
 AerodromeReferenceType : AerodromeNameType [0..1]+name
-AerodromeReferenceType : GeographicalPositionType [0..1]+referencePoint
+%% AerodromeReferenceType : GeographicalPositionType [0..1]+referencePoint
 AerodromeReferenceType : HypertextReferenceType [0..1]+href
 SignificantPointChoiceType --> AerodromeReferenceType : +aerodromeReferencePoint
 SignificantPointChoiceType --> DesignatedPointType : +designatedPoint
 SignificantPointChoiceType --> NavaidType : +navaid
 SignificantPointChoiceType --> GeographicalPositionType : +position
 SignificantPointChoiceType --> RelativePointType : +relativePoint
+DesignatedPointType --> "0..1" GeographicalPositionType : +position
+NavaidType --> "0..1" GeographicalPositionType : +position
+RelativePointType --> "0..1" GeographicalPositionType : +position
+RelativePointType --> NavaidType : +referencePoint
+AerodromeReferenceType --> "0..1" GeographicalPositionType : +referencePoint
 ```

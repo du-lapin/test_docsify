@@ -1,6 +1,13 @@
 # FIXM UML in Mermaid
 
-## Address 1
+## Test
+```mermaid
+classDiagram
+class Test
+Test : fixed srsName_urn:ogc:def:crs:EPSG::4326
+```
+
+## Address
 
 ```mermaid
 classDiagram

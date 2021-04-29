@@ -5,7 +5,7 @@
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension1
+FlightExtension extension2
 UniversallyUniqueIdentifier gufi
 }
 Flight : FlightExtension [0..1]extension
@@ -15,12 +15,14 @@ Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
 
 ```mermaid
 classDiagram
+class ContactInformationType
 ContactInformationType : TextNameType [0..1]+name
 ContactInformationType : ContactInformationExtensionType [0..2000]+extension
 ContactInformationType : PostalAddressType [0..1]+address
 ContactInformationType : OnlineContactType [0..2000]+onlineContact
 ContactInformationType : TelephoneContactType [0..1]+phoneFax
 ContactInformationType : TextNameType [0..1]+title
+class TelephoneContactType
 TelephoneContactType : TelephoneContactExtensionType [0..2000]+extension
 TelephoneContactType : TextPhoneType [0..1]+facsimile
 TelephoneContactType : TextPhoneType [0..1]+voice

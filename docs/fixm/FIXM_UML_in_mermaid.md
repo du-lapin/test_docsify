@@ -1,12 +1,5 @@
 # FIXM UML in Mermaid
 
-## Test 1
-```mermaid
-classDiagram
-class Test
-Test : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
-link Test "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html" "Go to XML definition"
-```
 
 ## Address
 
@@ -132,5 +125,17 @@ link Navaid "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm
 link RelativePoint "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RelativePointType.html" "Go to XML definition"
 link GeographicalPosition "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_GeographicalPositionType.html" "Go to XML definition"
 link NavaidServiceType "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidServiceTypeType.html" "Go to XML definition"
+```
+
+## Test 1
+```mermaid
+classDiagram
+class Test
+Test : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
+link Test "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html" "Go to XML definition"
+class TelecomNetworkType
+<<enumeration>> TelecomNetworkType
+TelecomNetworkType : AFTN
+TelecomNetworkType : INTERNET
 ```
 

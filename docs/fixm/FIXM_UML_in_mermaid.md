@@ -14,25 +14,25 @@ link Test "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_D
 classDiagram
 class ContactInformation
 ContactInformation : TextName [0..1]+name
-ContactInformation : ContactInformationExtension [0..2000]+extension
+ContactInformation : ContactInformationExtension [0..*]+extension
 %% ContactInformation : PostalAddress [0..1]+address
-%% ContactInformation : OnlineContact [0..2000]+onlineContact
+%% ContactInformation : OnlineContact [0..*]+onlineContact
 %% ContactInformation : TelephoneContact [0..1]+phoneFax
 ContactInformation : TextName [0..1]+title
 class TelephoneContact
-TelephoneContact : TelephoneContactExtension [0..2000]+extension
+TelephoneContact : TelephoneContactExtension [0..*]+extension
 TelephoneContact : TextPhone [0..1]+facsimile
 TelephoneContact : TextPhone [0..1]+voice
 class PostalAddress
 PostalAddress : TextName [0..1]+administrativeArea
-PostalAddress : PostalAddressExtension [0..2000]+extension
+PostalAddress : PostalAddressExtension [0..*]+extension
 PostalAddress : TextCity [0..1]+city
 PostalAddress : TextCountryCode [0..1]+countryCode
 PostalAddress : TextCountryName [0..1]+countryName
 PostalAddress : TextAddress [0..1]+deliveryPoint
 PostalAddress : TextName [0..1]+postalCode
 class OnlineContact
-OnlineContact : OnlineContactExtension [0..2000]+extension
+OnlineContact : OnlineContactExtension [0..*]+extension
 OnlineContact : TextAddress [0..1]+email
 OnlineContact : TextAddress [0..1]+linkage
 %% OnlineContact : NetworkChoice [0..1]+network
@@ -60,39 +60,39 @@ NetworkChoice --> TelecomNetworkType : +type
 classDiagram
 class SignificantPointChoice
 <<choice>> SignificantPointChoice
-%% SignificantPointChoice : AerodromeReference [1..1]+aerodromeReferencePoint
-%% SignificantPointChoice : DesignatedPoint [1..1]+designatedPoint
-%% SignificantPointChoice : Navaid [1..1]+navaid
-%% SignificantPointChoice : GeographicalPosition [1..1]+position
-%% SignificantPointChoice : RelativePoint [1..1]+relativePoint
+%% SignificantPointChoice : AerodromeReference +aerodromeReferencePoint
+%% SignificantPointChoice : DesignatedPoint +designatedPoint
+%% SignificantPointChoice : Navaid +navaid
+%% SignificantPointChoice : GeographicalPosition +position
+%% SignificantPointChoice : RelativePoint +relativePoint
 class AerodromeReference
-AerodromeReference : AerodromeReferenceExtension [0..2000]+extension
+AerodromeReference : AerodromeReferenceExtension [0..*]+extension
 AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator
 AerodromeReference : LocationIndicator [0..1]+locationIndicator
 AerodromeReference : AerodromeName [0..1]+name
 %% AerodromeReference : GeographicalPosition [0..1]+referencePoint
 AerodromeReference : HypertextReference [0..1]+href
 class DesignatedPoint
-DesignatedPoint : DesignatedPointExtension [0..2000]+extension
+DesignatedPoint : DesignatedPointExtension [0..*]+extension
 DesignatedPoint : HypertextReference [0..1]+href
-DesignatedPoint : DesignatedPointDesignator [1..1]+designator
+DesignatedPoint : DesignatedPointDesignator +designator
 %% DesignatedPoint : GeographicalPosition [0..1]+position
 class Navaid
-Navaid : NavaidExtension [0..2000]+extension
-Navaid : NavaidDesignator [1..1]+designator
+Navaid : NavaidExtension [0..*]+extension
+Navaid : NavaidDesignator +designator
 Navaid : HypertextReference [0..1]+href
 %% Navaid : NavaidServiceType [0..1]+navaidServiceType
 %% NavaidType : GeographicalPosition [0..1]+position
 class RelativePoint
-RelativePoint : Bearing [1..1]+bearing
-RelativePoint : Distance [1..1]+distance
-RelativePoint : RelativePointExtension [0..2000]+extension
+RelativePoint : Bearing +bearing
+RelativePoint : Distance +distance
+RelativePoint : RelativePointExtension [0..*]+extension
 %% RelativePoint : GeographicalPosition [0..1]+position
-%% RelativePoint : Navaid [1..1]+referencePoint
+%% RelativePoint : Navaid +referencePoint
 class GeographicalPosition
-GeographicalPosition : LatLongPos [1..1]+pos
+GeographicalPosition : LatLongPos +pos
 GeographicalPosition : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
-GeographicalPosition : GeographicalPositionExtension [0..2000]+extension
+GeographicalPosition : GeographicalPositionExtension [0..*]+extension
 class NavaidServiceType{
 <<enumeration>>
 DF

@@ -4,7 +4,7 @@
 ```mermaid
 classDiagram
 class Test
-Test : fixed~urn#58;ogc_def_crs_EPSG__4326~ +srsName
+Test : fixed~urn#58;ogc58;def58;crs58;EPSG58;58;4326~ +srsName
 ```
 
 ## Address

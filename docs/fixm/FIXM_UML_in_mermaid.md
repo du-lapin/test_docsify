@@ -5,7 +5,7 @@
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension3
+FlightExtension extension4
 UniversallyUniqueIdentifier gufi
 }
 Flight : FlightExtension [0..1]extension
@@ -16,11 +16,11 @@ Flight --> "0..1"  UniversallyUniqueIdentifier : +gufi
 ```mermaid
 classDiagram
 class ContactInformationType
-%% ContactInformationType : TextNameType [0..1]+name
+ContactInformationType : TextNameType [0..1]+name
 ContactInformationType : ContactInformationExtensionType [0..2000]+extension
-ContactInformationType : PostalAddressType [0..1]+address
-ContactInformationType : OnlineContactType [0..2000]+onlineContact
-ContactInformationType : TelephoneContactType [0..1]+phoneFax
+%% ContactInformationType : PostalAddressType [0..1]+address
+%% ContactInformationType : OnlineContactType [0..2000]+onlineContact
+%% ContactInformationType : TelephoneContactType [0..1]+phoneFax
 ContactInformationType : TextNameType [0..1]+title
 class TelephoneContactType
 TelephoneContactType : TelephoneContactExtensionType [0..2000]+extension
@@ -42,5 +42,7 @@ OnlineContactType : NetworkChoiceType [0..1]+network
 class NetworkChoiceType
 NetworkChoiceType : CharacterStringType [1..1]+other
 NetworkChoiceType : TelecomNetworkTypeType [1..1]+type
-ContactInformationType --> "0..1" TextNameType : +name
+ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
+ContactInformationType --> "0..1" PostalAddressType : +address
+ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
 ```

@@ -32,7 +32,7 @@ class NetworkChoice
 <<choice>> NetworkChoice
 NetworkChoice : CharacterString +other
 %% NetworkChoice : TelecomNetworkType +type
-class TelecomNetworkType{
+class TelecomNetworkType:::cssEnum{
 <<enumeration>>
 AFTN
 INTERNET

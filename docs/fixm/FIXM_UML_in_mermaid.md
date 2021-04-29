@@ -5,6 +5,7 @@
 classDiagram
 class Test
 Test : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
+link Test "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointDesignatorType.html#Link11" "Go to XML definition"
 ```
 
 ## Address
@@ -125,3 +126,4 @@ RelativePoint --> GeographicalPosition : [0..1]+position
 RelativePoint --> Navaid : +referencePoint
 AerodromeReference --> GeographicalPosition : [0..1]+referencePoint
 ```
+

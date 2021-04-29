@@ -31,8 +31,8 @@ OnlineContact : TextAddress [0..1]+linkage
 class NetworkChoice
 <<choice>> NetworkChoice
 NetworkChoice : CharacterString +other
-%% NetworkChoice : TelecomNetwork +type
-class TelecomNetwork{
+%% NetworkChoice : TelecomNetworkType +type
+class TelecomNetworkType{
 <<enumeration>>
 AFTN
 INTERNET
@@ -41,7 +41,7 @@ ContactInformation --> "0..1" TelephoneContact : +phoneFax
 ContactInformation --> "0..1" PostalAddress : +address
 ContactInformation --> "0..1" OnlineContact : +onlineContact
 OnlineContact --> "0..1" NetworkChoice : +network
-NetworkChoice --> TelecomNetwork : +type
+NetworkChoice --> TelecomNetworkType : +type
 ```
 
 ## AeronauticalReference

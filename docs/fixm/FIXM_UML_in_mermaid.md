@@ -90,7 +90,7 @@ RelativePoint : RelativePointExtension [0..2000]+extension
 %% RelativePoint : Navaid [1..1]+referencePoint
 class GeographicalPosition
 GeographicalPosition : LatLongPos [1..1]+pos
-%% GeographicalPosition : urn:ogc:def:crs:EPSG::4326 srsName
+GeographicalPosition : fixed~urn#58;ogc58;def58;crs58;EPSG58;58;4326~ +srsName
 GeographicalPosition : GeographicalPositionExtension [0..2000]+extension
 class NavaidServiceType{
 <<enumeration>>

@@ -1,6 +1,6 @@
 # FIXM UML in Mermaid
 
-## Address
+## Address 1
 
 ```mermaid
 classDiagram
@@ -30,12 +30,18 @@ OnlineContactType : TextAddressType [0..1]+linkage
 %% OnlineContactType : NetworkChoiceType [0..1]+network
 class NetworkChoiceType
 <<choice>> NetworkChoiceType
-NetworkChoiceType : CharacterStringType [1..1]+other
-NetworkChoiceType : TelecomNetworkTypeType [1..1]+type
+NetworkChoiceType : CharacterStringType +other
+%% NetworkChoiceType : TelecomNetworkTypeType +type
+class TelecomNetworkTypeType{
+<<enumeration>>
+AFTN
+INTERNET
+}
 ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
 ContactInformationType --> "0..1" PostalAddressType : +address
 ContactInformationType --> "0..1" OnlineContactType : +onlineContact
 OnlineContactType --> "0..1" NetworkChoiceType : +network
+NetworkChoiceType --> TelecomNetworkTypeType : +type
 ```
 
 ## AeronauticalReference

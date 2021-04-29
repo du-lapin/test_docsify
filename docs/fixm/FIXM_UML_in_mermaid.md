@@ -50,49 +50,49 @@ NetworkChoice --> TelecomNetworkType : +type
 
 ```mermaid
 classDiagram
-class SignificantPointChoiceType
-<<choice>> SignificantPointChoiceType
-%% SignificantPointChoiceType : AerodromeReferenceType [1..1]+aerodromeReferencePoint
-%% SignificantPointChoiceType : DesignatedPointType [1..1]+designatedPoint
-%% SignificantPointChoiceType : NavaidType [1..1]+navaid
-%% SignificantPointChoiceType : GeographicalPositionType [1..1]+position
-%% SignificantPointChoiceType : RelativePointType [1..1]+relativePoint
-class DesignatedPointType
-DesignatedPointType : DesignatedPointExtensionType [0..2000]+extension
-DesignatedPointType : HypertextReferenceType [0..1]+href
-DesignatedPointType : DesignatedPointDesignatorType [1..1]+designator
-%% DesignatedPointType : GeographicalPositionType [0..1]+position
-class NavaidType
-NavaidType : NavaidExtensionType [0..2000]+extension
-NavaidType : NavaidDesignatorType [1..1]+designator
-NavaidType : HypertextReferenceType [0..1]+href
-NavaidType : NavaidServiceTypeType [0..1]+navaidServiceType
-%% NavaidType : GeographicalPositionType [0..1]+position
-class RelativePointType
-RelativePointType : BearingType [1..1]+bearing
-RelativePointType : DistanceType [1..1]+distance
-RelativePointType : RelativePointExtensionType [0..2000]+extension
-%% RelativePointType : GeographicalPositionType [0..1]+position
-%% RelativePointType : NavaidType [1..1]+referencePoint
-class GeographicalPositionType
-GeographicalPositionType : LatLongPosType [1..1]+pos
-%% GeographicalPositionType : urn:ogc:def:crs:EPSG::4326 srsName
-GeographicalPositionType : GeographicalPositionExtensionType [0..2000]+extension
-class AerodromeReferenceType
-AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]+extension
-AerodromeReferenceType : IataAerodromeDesignatorType [0..1]+iataDesignator
-AerodromeReferenceType : LocationIndicatorType [0..1]+locationIndicator
-AerodromeReferenceType : AerodromeNameType [0..1]+name
-%% AerodromeReferenceType : GeographicalPositionType [0..1]+referencePoint
-AerodromeReferenceType : HypertextReferenceType [0..1]+href
-SignificantPointChoiceType --> AerodromeReferenceType : +aerodromeReferencePoint
-SignificantPointChoiceType --> DesignatedPointType : +designatedPoint
-SignificantPointChoiceType --> NavaidType : +navaid
-SignificantPointChoiceType --> GeographicalPositionType : +position
-SignificantPointChoiceType --> RelativePointType : +relativePoint
-DesignatedPointType --> "0..1" GeographicalPositionType : +position
-NavaidType --> "0..1" GeographicalPositionType : +position
-RelativePointType --> "0..1" GeographicalPositionType : +position
-RelativePointType --> NavaidType : +referencePoint
-AerodromeReferenceType --> "0..1" GeographicalPositionType : +referencePoint
+class SignificantPointChoice
+<<choice>> SignificantPointChoice
+%% SignificantPointChoice : AerodromeReference [1..1]+aerodromeReferencePoint
+%% SignificantPointChoice : DesignatedPoint [1..1]+designatedPoint
+%% SignificantPointChoice : Navaid [1..1]+navaid
+%% SignificantPointChoice : GeographicalPosition [1..1]+position
+%% SignificantPointChoice : RelativePoint [1..1]+relativePoint
+class DesignatedPoint
+DesignatedPoint : DesignatedPointExtension [0..2000]+extension
+DesignatedPoint : HypertextReference [0..1]+href
+DesignatedPoint : DesignatedPointDesignator [1..1]+designator
+%% DesignatedPoint : GeographicalPosition [0..1]+position
+class Navaid
+Navaid : NavaidExtension [0..2000]+extension
+Navaid : NavaidDesignator [1..1]+designator
+Navaid : HypertextReference [0..1]+href
+Navaid : NavaidServiceType [0..1]+navaidServiceType
+%% NavaidType : GeographicalPosition [0..1]+position
+class RelativePoint
+RelativePoint : Bearing [1..1]+bearing
+RelativePoint : Distance [1..1]+distance
+RelativePoint : RelativePointExtension [0..2000]+extension
+%% RelativePoint : GeographicalPosition [0..1]+position
+%% RelativePoint : Navaid [1..1]+referencePoint
+class GeographicalPosition
+GeographicalPosition : LatLongPos [1..1]+pos
+%% GeographicalPosition : urn:ogc:def:crs:EPSG::4326 srsName
+GeographicalPosition : GeographicalPositionExtension [0..2000]+extension
+class AerodromeReference
+AerodromeReference : AerodromeReferenceExtension [0..2000]+extension
+AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator
+AerodromeReference : LocationIndicator [0..1]+locationIndicator
+AerodromeReference : AerodromeName [0..1]+name
+%% AerodromeReference : GeographicalPosition [0..1]+referencePoint
+AerodromeReference : HypertextReference [0..1]+href
+SignificantPointChoice --> AerodromeReference : +aerodromeReferencePoint
+SignificantPointChoice --> DesignatedPoint : +designatedPoint
+SignificantPointChoice --> Navaid : +navaid
+SignificantPointChoice --> GeographicalPosition : +position
+SignificantPointChoice --> RelativePoint : +relativePoint
+DesignatedPoint --> "0..1" GeographicalPosition : +position
+Navaid --> "0..1" GeographicalPosition : +position
+RelativePoint --> "0..1" GeographicalPosition : +position
+RelativePoint --> Navaid : +referencePoint
+AerodromeReference --> "0..1" GeographicalPosition : +referencePoint
 ```

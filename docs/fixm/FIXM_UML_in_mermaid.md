@@ -4,7 +4,7 @@
 ```mermaid
 classDiagram
 class Test
-Test : fixed +srsName
+Test : "urn:ogc:def:crs:EPSG::4326" +srsName
 ```
 
 ## Address
@@ -73,7 +73,7 @@ class Navaid
 Navaid : NavaidExtension [0..2000]+extension
 Navaid : NavaidDesignator [1..1]+designator
 Navaid : HypertextReference [0..1]+href
-Navaid : NavaidServiceType [0..1]+navaidServiceType
+%% Navaid : NavaidServiceType [0..1]+navaidServiceType
 %% NavaidType : GeographicalPosition [0..1]+position
 class RelativePoint
 RelativePoint : Bearing [1..1]+bearing
@@ -92,6 +92,27 @@ AerodromeReference : LocationIndicator [0..1]+locationIndicator
 AerodromeReference : AerodromeName [0..1]+name
 %% AerodromeReference : GeographicalPosition [0..1]+referencePoint
 AerodromeReference : HypertextReference [0..1]+href
+class NavaidServiceType{
+<<enumeration>>
+DF
+DME
+ILS
+ILS_DME
+LOC
+LOC_DME
+MKR
+MLS
+MLS_DME
+NDB
+NDB_DME
+NDB_MKR
+SDF
+TACAN
+TLS
+VOR
+VOR_DME
+VORTAC
+}
 SignificantPointChoice --> AerodromeReference : +aerodromeReferencePoint
 SignificantPointChoice --> DesignatedPoint : +designatedPoint
 SignificantPointChoice --> Navaid : +navaid
@@ -99,6 +120,7 @@ SignificantPointChoice --> GeographicalPosition : +position
 SignificantPointChoice --> RelativePoint : +relativePoint
 DesignatedPoint --> "0..1" GeographicalPosition : +position
 Navaid --> "0..1" GeographicalPosition : +position
+Navaid --> "0..1" NavaidServiceType : +navaidServiceType
 RelativePoint --> "0..1" GeographicalPosition : +position
 RelativePoint --> Navaid : +referencePoint
 AerodromeReference --> "0..1" GeographicalPosition : +referencePoint

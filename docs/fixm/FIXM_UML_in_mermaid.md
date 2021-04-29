@@ -33,11 +33,10 @@ class NetworkChoice
 <<choice>> NetworkChoice
 NetworkChoice : CharacterString +other
 %% NetworkChoice : TelecomNetworkType +type
-class TelecomNetworkType{
-<<enumeration>>
-AFTN
-INTERNET
-}
+class TelecomNetworkType
+<<enumeration>> TelecomNetworkType
+TelecomNetworkType : AFTN
+TelecomNetworkType : INTERNET
 ContactInformation --> TelephoneContact : [0..1]+phoneFax
 ContactInformation --> PostalAddress : [0..1]+address
 ContactInformation --> OnlineContact : [0..1]+onlineContact
@@ -86,27 +85,26 @@ class GeographicalPosition
 GeographicalPosition : LatLongPos +pos
 GeographicalPosition : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
 GeographicalPosition : GeographicalPositionExtension [0..*]+extension
-class NavaidServiceType{
-<<enumeration>>
-DF
-DME
-ILS
-ILS_DME
-LOC
-LOC_DME
-MKR
-MLS
-MLS_DME
-NDB
-NDB_DME
-NDB_MKR
-SDF
-TACAN
-TLS
-VOR
-VOR_DME
-VORTAC
-}
+class NavaidServiceType
+<<enumeration>> NavaidServiceType
+NavaidServiceType : DF
+NavaidServiceType : DME
+NavaidServiceType : ILS
+NavaidServiceType : ILS_DME
+NavaidServiceType : LOC
+NavaidServiceType : LOC_DME
+NavaidServiceType : MKR
+NavaidServiceType : MLS
+NavaidServiceType : MLS_DME
+NavaidServiceType : NDB
+NavaidServiceType : NDB_DME
+NavaidServiceType : NDB_MKR
+NavaidServiceType : SDF
+NavaidServiceType : TACAN
+NavaidServiceType : TLS
+NavaidServiceType : VOR
+NavaidServiceType : VOR_DME
+NavaidServiceType : VORTAC
 SignificantPointChoice --> AerodromeReference : +aerodromeReferencePoint
 SignificantPointChoice --> DesignatedPoint : +designatedPoint
 SignificantPointChoice --> Navaid : +navaid

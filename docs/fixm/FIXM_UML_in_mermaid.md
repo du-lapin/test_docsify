@@ -1,10 +1,10 @@
 # FIXM UML in Mermaid
 
-## Test 2
+## Test 1
 ```mermaid
 classDiagram
 class Test
-Test : fixed~urn:ogc:def:crs:EPSG::4326~ +srsName
+Test : fixed~urn_ogc_def_crs_EPSG__4326~ +srsName
 ```
 
 ## Address
@@ -44,10 +44,10 @@ class TelecomNetworkType{
 AFTN
 INTERNET
 }
-ContactInformation --> "0..1" TelephoneContact : +phoneFax
-ContactInformation --> "0..1" PostalAddress : +address
-ContactInformation --> "0..1" OnlineContact : +onlineContact
-OnlineContact --> "0..1" NetworkChoice : +network
+ContactInformation --> TelephoneContact : [0..1]+phoneFax
+ContactInformation --> PostalAddress : [0..1]+address
+ContactInformation --> OnlineContact : [0..1]+onlineContact
+OnlineContact --> NetworkChoice : [0..1]+network
 NetworkChoice --> TelecomNetworkType : +type
 ```
 

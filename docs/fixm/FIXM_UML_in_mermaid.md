@@ -52,11 +52,11 @@ NetworkChoice --> TelecomNetworkType : +type
 classDiagram
 class SignificantPointChoiceType
 <<choice>> SignificantPointChoiceType
-SignificantPointChoiceType : AerodromeReferenceType +aerodromeReferencePoint
-SignificantPointChoiceType : DesignatedPointType +designatedPoint
-SignificantPointChoiceType : NavaidType +navaid
-SignificantPointChoiceType : GeographicalPositionType +position
-SignificantPointChoiceType : RelativePointType +relativePoint
+SignificantPointChoiceType : AerodromeReferenceType [1..1]+aerodromeReferencePoint
+SignificantPointChoiceType : DesignatedPointType [1..1]+designatedPoint
+SignificantPointChoiceType : NavaidType [1..1]+navaid
+SignificantPointChoiceType : GeographicalPositionType [1..1]+position
+SignificantPointChoiceType : RelativePointType [1..1]+relativePoint
 class DesignatedPointType
 DesignatedPointType : DesignatedPointExtensionType [0..2000]+extension
 DesignatedPointType : HypertextReferenceType [0..1]+href
@@ -76,7 +76,7 @@ RelativePointType : GeographicalPositionType [0..1]+position
 RelativePointType : NavaidType [1..1]+referencePoint
 class GeographicalPositionType
 GeographicalPositionType : LatLongPosType [1..1]+pos
-GeographicalPositionType : urn:ogc:def:crs:EPSG::4326 srsName
+%% GeographicalPositionType : urn:ogc:def:crs:EPSG::4326 srsName
 GeographicalPositionType : GeographicalPositionExtensionType [0..2000]+extension
 class AerodromeReferenceType
 AerodromeReferenceType : AerodromeReferenceExtensionType [0..2000]+extension

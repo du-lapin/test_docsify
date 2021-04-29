@@ -118,10 +118,10 @@ SignificantPointChoice --> DesignatedPoint : +designatedPoint
 SignificantPointChoice --> Navaid : +navaid
 SignificantPointChoice --> GeographicalPosition : +position
 SignificantPointChoice --> RelativePoint : +relativePoint
-DesignatedPoint --> "0..1" GeographicalPosition : +position
-Navaid --> "0..1" GeographicalPosition : +position
-Navaid --> "0..1" NavaidServiceType : +navaidServiceType
-RelativePoint --> "0..1" GeographicalPosition : +position
+DesignatedPoint --> GeographicalPosition : [0..1]+position
+Navaid --> GeographicalPosition : [0..1]+position
+Navaid --> NavaidServiceType : [0..1]+navaidServiceType
+RelativePoint --> GeographicalPosition : [0..1]+position
 RelativePoint --> Navaid : +referencePoint
-AerodromeReference --> "0..1" GeographicalPosition : [0..1]+referencePoint
+AerodromeReference --> GeographicalPosition : [0..1]+referencePoint
 ```

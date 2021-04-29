@@ -5,7 +5,7 @@
 classDiagram
 class Flight{
 FlightExtension extension
-FlightExtension extension4
+FlightExtension extension5
 UniversallyUniqueIdentifier gufi
 }
 Flight : FlightExtension [0..1]extension
@@ -44,5 +44,5 @@ NetworkChoiceType : CharacterStringType [1..1]+other
 NetworkChoiceType : TelecomNetworkTypeType [1..1]+type
 ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
 ContactInformationType --> "0..1" PostalAddressType : +address
-ContactInformationType --> "0..1" TelephoneContactType : +phoneFax
+ContactInformationType --> "0..1" OnlineContactType : +onlineContact
 ```

@@ -123,5 +123,5 @@ Navaid --> "0..1" GeographicalPosition : +position
 Navaid --> "0..1" NavaidServiceType : +navaidServiceType
 RelativePoint --> "0..1" GeographicalPosition : +position
 RelativePoint --> Navaid : +referencePoint
-AerodromeReference --> "0..1" GeographicalPosition : +referencePoint
+AerodromeReference --> "0..1" GeographicalPosition : [0..1]+referencePoint
 ```

@@ -31,7 +31,7 @@
   max-width: 100%;
 }
 
-.cssEnum > rect{
+.cssEnum rect{
   fill:#FF0000;
   stroke:#FFFF00;
   stroke-width:4px;

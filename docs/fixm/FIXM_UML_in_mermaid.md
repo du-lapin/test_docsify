@@ -1,6 +1,6 @@
 # FIXM UML in Mermaid
 
-## Address
+## Address 1
 
 ```mermaid
 classDiagram

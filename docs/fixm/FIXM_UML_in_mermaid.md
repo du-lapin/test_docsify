@@ -1,10 +1,10 @@
 # FIXM UML in Mermaid
 
-## Test 1
+## Test 2
 ```mermaid
 classDiagram
 class Test
-Test : "urn:ogc:def:crs:EPSG::4326" +srsName
+Test : fixed~urn:ogc:def:crs:EPSG::4326~ +srsName
 ```
 
 ## Address
@@ -64,6 +64,13 @@ class SignificantPointChoice
 %% SignificantPointChoice : Navaid [1..1]+navaid
 %% SignificantPointChoice : GeographicalPosition [1..1]+position
 %% SignificantPointChoice : RelativePoint [1..1]+relativePoint
+class AerodromeReference
+AerodromeReference : AerodromeReferenceExtension [0..2000]+extension
+AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator
+AerodromeReference : LocationIndicator [0..1]+locationIndicator
+AerodromeReference : AerodromeName [0..1]+name
+%% AerodromeReference : GeographicalPosition [0..1]+referencePoint
+AerodromeReference : HypertextReference [0..1]+href
 class DesignatedPoint
 DesignatedPoint : DesignatedPointExtension [0..2000]+extension
 DesignatedPoint : HypertextReference [0..1]+href
@@ -85,13 +92,6 @@ class GeographicalPosition
 GeographicalPosition : LatLongPos [1..1]+pos
 %% GeographicalPosition : urn:ogc:def:crs:EPSG::4326 srsName
 GeographicalPosition : GeographicalPositionExtension [0..2000]+extension
-class AerodromeReference
-AerodromeReference : AerodromeReferenceExtension [0..2000]+extension
-AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator
-AerodromeReference : LocationIndicator [0..1]+locationIndicator
-AerodromeReference : AerodromeName [0..1]+name
-%% AerodromeReference : GeographicalPosition [0..1]+referencePoint
-AerodromeReference : HypertextReference [0..1]+href
 class NavaidServiceType{
 <<enumeration>>
 DF

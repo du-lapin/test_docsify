@@ -306,3 +306,106 @@ NavaidServiceType : VORTAC
 link NavaidServiceType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidServiceTypeType.html" "Go to XML definition"
 ```
 
+## FlightData
+
+```mermaid
+classDiagram
+class Flight
+Flight : PersonOrOrganization [0..1]+flightPlanOriginator
+Flight : PersonOrOrganization [0..1]+flightPlanSubmitter
+Flight : UniversallyUniqueIdentifier [0..1]+gufi
+Flight : PersonOrOrganization [0..1]+gufiOriginator
+Flight : AircraftOperator [0..1]+operator
+Flight : FlightExtension [0..*]+extension
+Flight : CharacterString [0..1]+remarks
+Flight --> Aircraft : [0..1]+aircraft
+Flight --> Arrival : [0..1]+arrival
+Flight : DangerousGoods [0..*]+dangerousGoods
+Flight --> Departure : [0..1]+departure
+Flight --> FlightEmergency : [0..1]+emergency
+Flight --> EnRoute : [0..1]+enRoute
+Flight : FlightConstraint [0..*]+flightConstraint
+Flight : FlightIdentification [0..1]+flightIdentification
+Flight --> TypeOfFlight : [0..1]+flightType
+Flight : RadioCommunicationFailure [0..1]+radioCommunicationFailure
+Flight --> RouteTrajectoryGroupContainer : [0..1]+routeTrajectoryGroup
+Flight : SpecialHandlingReasonCodeList [0..1]+specialHandling
+Flight : SupplementaryData [0..1]+supplementaryData
+link Flight "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_FlightType.html" "Go to XML definition"
+class Departure
+Departure : Time [0..1]+actualTimeOfDeparture
+Departure : AerodromeReference [0..1]+aerodrome
+Departure : Time [0..1]+estimatedOffBlockTime
+Departure : RunwayDirectionDesignator [0..1]+runwayDirection
+Departure : AerodromeReference [0..*]+takeoffAlternateAerodrome
+Departure : AirportSlotIdentification [0..1]+airportSlotIdentification
+Departure : DepartureExtension [0..*]+extension
+Departure : AerodromeReference [0..1]+aerodromePrevious
+Departure : Time [0..1]+estimatedOffBlockTimePrevious
+Departure : AirfileIndicator [0..1]+airfileIndicator
+link Departure "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DepartureType.html" "Go to XML definition"
+class Aircraft
+Aircraft : CharacterString [0..1]+coloursAndMarkings
+Aircraft : AircraftAddress [0..1]+aircraftAddress
+Aircraft : AircraftApproachCategory [0..1]+aircraftApproachCategory
+Aircraft : AircraftType [0..*]+aircraftType
+Aircraft : FlightCapabilities [0..1]+capabilities
+Aircraft : FormationCount [0..1]+formationCount
+Aircraft : AircraftRegistrationList [0..1]+registration
+Aircraft : WakeTurbulenceCategory [0..1]+wakeTurbulence
+Aircraft : AircraftExtension [0..*]+extension
+link Aircraft "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AircraftType.html" "Go to XML definition"
+class TypeOfFlight
+<<enumeration>> TypeOfFlight
+TypeOfFlight : M
+TypeOfFlight : G
+TypeOfFlight : N
+TypeOfFlight : S
+TypeOfFlight : X
+link TypeOfFlight "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TypeOfFlightType.html" "Go to XML definition"
+class FlightEmergency
+FlightEmergency : CharacterString [0..1]+actionTaken
+FlightEmergency : CharacterString [0..1]+emergencyDescription
+FlightEmergency : AtcUnitReference [0..1]+originator
+FlightEmergency : CharacterString [0..1]+otherInformation
+FlightEmergency : FlightEmergencyExtension [0..*]+extension
+FlightEmergency : LastContact [0..1]+lastContact
+FlightEmergency : EmergencyPhase [0..1]+phase
+link FlightEmergency "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_FlightEmergencyType.html" "Go to XML definition"
+class EnRoute
+EnRoute : AerodromeReference [0..*]+alternateAerodrome
+EnRoute : ModeACode [0..1]+currentModeACode
+EnRoute : EnRouteExtension [0..*]+extension
+EnRoute : BoundaryCrossing [0..1]+boundaryCrossingCoordination
+link EnRoute "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_EnRouteType.html" "Go to XML definition"
+class RouteTrajectoryGroup
+RouteTrajectoryGroup : Mass [0..1]+takeoffMass
+RouteTrajectoryGroup : PerformanceProfile [0..1]+climbProfile
+RouteTrajectoryGroup : SpeedSchedule [0..1]+climbSchedule
+RouteTrajectoryGroup : PerformanceProfile [0..1]+descentProfile
+RouteTrajectoryGroup : SpeedSchedule [0..1]+descentSchedule
+RouteTrajectoryGroup : RouteTrajectoryElement [0..*]+element
+RouteTrajectoryGroup : RouteTrajectoryGroupExtension [0..*]+extension
+RouteTrajectoryGroup : FlightRouteInformation [0..1]+routeInformation
+link RouteTrajectoryGroup "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RouteTrajectoryGroupType.html" "Go to XML definition"
+class Arrival
+Arrival : Time [0..1]+actualTimeOfArrival
+Arrival : RunwayDirectionDesignator [0..1]+runwayDirection
+Arrival : AerodromeReference [0..1]+arrivalAerodrome
+Arrival : AerodromeReference [0..1]+destinationAerodrome
+Arrival : AerodromeReference [0..2]+destinationAerodromeAlternate
+Arrival : AirportSlotIdentification [0..1]+airportSlotIdentification
+Arrival : ArrivalExtension [0..*]+extension
+Arrival : AerodromeReference [0..1]+destinationAerodromePrevious
+Arrival : ReclearanceInFlight [0..1]+reclearanceInFlight
+link Arrival "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_ArrivalType.html" "Go to XML definition"
+class RouteTrajectoryGroupContainer
+RouteTrajectoryGroupContainer : RouteTrajectoryGroupContainerExtension [0..*]+extension
+RouteTrajectoryGroupContainer --> RouteTrajectoryGroup : [0..1]+agreed
+RouteTrajectoryGroupContainer --> RouteTrajectoryGroup : [0..1]+current
+RouteTrajectoryGroupContainer --> RouteTrajectoryGroup : [0..1]+desired
+RouteTrajectoryGroupContainer --> RouteTrajectoryGroup : [0..1]+filed
+RouteTrajectoryGroupContainer --> RouteTrajectoryGroup : [0..1]+negotiating
+RouteTrajectoryGroupContainer : RankedTrajectory [0..*]+ranked
+link RouteTrajectoryGroupContainer "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RouteTrajectoryGroupContainerType.html" "Go to XML definition"
+```

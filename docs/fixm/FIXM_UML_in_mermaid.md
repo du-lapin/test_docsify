@@ -126,6 +126,7 @@ link NavaidServiceType "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documen
 ```
 
 ## Test 1 (OLD)
+
 ```mermaid
 classDiagram
 class SignificantPointChoice
@@ -193,115 +194,115 @@ link NavaidServiceType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_doc
 ```
 
 
-## Address	
-	
-```mermaid	
-classDiagram	
-class TelephoneContact	
-TelephoneContact : TelephoneContactExtension [0..*]+extension	
-TelephoneContact : TextPhone [0..1]+facsimile	
-TelephoneContact : TextPhone [0..1]+voice	
-link TelephoneContact "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelephoneContactType.html" "Go to XML definition"	
-class ContactInformation	
-ContactInformation : TextName [0..1]+name	
-ContactInformation : ContactInformationExtension [0..*]+extension	
-ContactInformation --> PostalAddress : [0..1]+address	
-ContactInformation --> OnlineContact : [0..*]+onlineContact	
-ContactInformation --> TelephoneContact : [0..1]+phoneFax	
-ContactInformation : TextName [0..1]+title	
-link ContactInformation "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_ContactInformationType.html" "Go to XML definition"	
-class OnlineContact	
-OnlineContact : OnlineContactExtension [0..*]+extension	
-OnlineContact : TextAddress [0..1]+email	
-OnlineContact : TextAddress [0..1]+linkage	
-OnlineContact --> NetworkChoice : [0..1]+network	
-link OnlineContact "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_OnlineContactType.html" "Go to XML definition"	
-class PostalAddress	
-PostalAddress : TextName [0..1]+administrativeArea	
-PostalAddress : PostalAddressExtension [0..*]+extension	
-PostalAddress : TextCity [0..1]+city	
-PostalAddress : TextCountryCode [0..1]+countryCode	
-PostalAddress : TextCountryName [0..1]+countryName	
-PostalAddress : TextAddress [0..1]+deliveryPoint	
-PostalAddress : TextName [0..1]+postalCode	
-link PostalAddress "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_PostalAddressType.html" "Go to XML definition"	
-class TelecomNetworkType	
-<<enumeration>> TelecomNetworkType	
-TelecomNetworkType : AFTN	
-TelecomNetworkType : INTERNET	
-link TelecomNetworkType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelecomNetworkTypeType.html" "Go to XML definition"	
-class NetworkChoice	
-<<choice>> NetworkChoice	
-NetworkChoice : CharacterString +other	
-NetworkChoice --> TelecomNetworkType : +type	
-link NetworkChoice "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NetworkChoiceType.html" "Go to XML definition"	
-```	
-	
-## AeronauticalReference: SignificantPoint	
-	
-```mermaid	
-classDiagram	
-class SignificantPointChoice	
-<<choice>> SignificantPointChoice	
-SignificantPointChoice --> AerodromeReference : +aerodromeReferencePoint	
-SignificantPointChoice --> DesignatedPoint : +designatedPoint	
-SignificantPointChoice --> Navaid : +navaid	
-SignificantPointChoice --> GeographicalPosition : +position	
-SignificantPointChoice --> RelativePoint : +relativePoint	
-link SignificantPointChoice "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_SignificantPointChoiceType.html" "Go to XML definition"	
-class RelativePoint	
-RelativePoint : Bearing +bearing	
-RelativePoint : Distance +distance	
-RelativePoint : RelativePointExtension [0..*]+extension	
-RelativePoint --> GeographicalPosition : [0..1]+position	
-RelativePoint --> Navaid : +referencePoint	
-link RelativePoint "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RelativePointType.html" "Go to XML definition"	
-class Navaid	
-Navaid : NavaidExtension [0..*]+extension	
-Navaid : NavaidDesignator +designator	
-Navaid : HypertextReference [0..1]+href	
-Navaid --> NavaidServiceType : [0..1]+navaidServiceType	
-Navaid --> GeographicalPosition : [0..1]+position	
-link Navaid "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidType.html" "Go to XML definition"	
-class GeographicalPosition	
-GeographicalPosition : LatLongPos +pos	
-GeographicalPosition : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName	
-GeographicalPosition : GeographicalPositionExtension [0..*]+extension	
-link GeographicalPosition "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_GeographicalPositionType.html" "Go to XML definition"	
-class DesignatedPoint	
-DesignatedPoint : DesignatedPointExtension [0..*]+extension	
-DesignatedPoint : HypertextReference [0..1]+href	
-DesignatedPoint : DesignatedPointDesignator +designator	
-DesignatedPoint --> GeographicalPosition : [0..1]+position	
-link DesignatedPoint "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html" "Go to XML definition"	
-class AerodromeReference	
-AerodromeReference : AerodromeReferenceExtension [0..*]+extension	
-AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator	
-AerodromeReference : LocationIndicator [0..1]+locationIndicator	
-AerodromeReference : AerodromeName [0..1]+name	
-AerodromeReference --> GeographicalPosition : [0..1]+referencePoint	
-AerodromeReference : HypertextReference [0..1]+href	
-link AerodromeReference "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html" "Go to XML definition"	
-class NavaidServiceType	
-<<enumeration>> NavaidServiceType	
-NavaidServiceType : DF	
-NavaidServiceType : DME	
-NavaidServiceType : ILS	
-NavaidServiceType : ILS_DME	
-NavaidServiceType : LOC	
-NavaidServiceType : LOC_DME	
-NavaidServiceType : MKR	
-NavaidServiceType : MLS	
-NavaidServiceType : MLS_DME	
-NavaidServiceType : NDB	
-NavaidServiceType : NDB_DME	
-NavaidServiceType : NDB_MKR	
-NavaidServiceType : SDF	
-NavaidServiceType : TACAN	
-NavaidServiceType : TLS	
-NavaidServiceType : VOR	
-NavaidServiceType : VOR_DME	
-NavaidServiceType : VORTAC	
-link NavaidServiceType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidServiceTypeType.html" "Go to XML definition"	
-```	
-	
+## Address
+
+```mermaid
+classDiagram
+class TelephoneContact
+TelephoneContact : TelephoneContactExtension [0..*]+extension
+TelephoneContact : TextPhone [0..1]+facsimile
+TelephoneContact : TextPhone [0..1]+voice
+link TelephoneContact "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelephoneContactType.html" "Go to XML definition"
+class ContactInformation
+ContactInformation : TextName [0..1]+name
+ContactInformation : ContactInformationExtension [0..*]+extension
+ContactInformation --> PostalAddress : [0..1]+address
+ContactInformation --> OnlineContact : [0..*]+onlineContact
+ContactInformation --> TelephoneContact : [0..1]+phoneFax
+ContactInformation : TextName [0..1]+title
+link ContactInformation "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_ContactInformationType.html" "Go to XML definition"
+class OnlineContact
+OnlineContact : OnlineContactExtension [0..*]+extension
+OnlineContact : TextAddress [0..1]+email
+OnlineContact : TextAddress [0..1]+linkage
+OnlineContact --> NetworkChoice : [0..1]+network
+link OnlineContact "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_OnlineContactType.html" "Go to XML definition"
+class PostalAddress
+PostalAddress : TextName [0..1]+administrativeArea
+PostalAddress : PostalAddressExtension [0..*]+extension
+PostalAddress : TextCity [0..1]+city
+PostalAddress : TextCountryCode [0..1]+countryCode
+PostalAddress : TextCountryName [0..1]+countryName
+PostalAddress : TextAddress [0..1]+deliveryPoint
+PostalAddress : TextName [0..1]+postalCode
+link PostalAddress "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_PostalAddressType.html" "Go to XML definition"
+class TelecomNetworkType
+<<enumeration>> TelecomNetworkType
+TelecomNetworkType : AFTN
+TelecomNetworkType : INTERNET
+link TelecomNetworkType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelecomNetworkTypeType.html" "Go to XML definition"
+class NetworkChoice
+<<choice>> NetworkChoice
+NetworkChoice : CharacterString +other
+NetworkChoice --> TelecomNetworkType : +type
+link NetworkChoice "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NetworkChoiceType.html" "Go to XML definition"
+```
+
+## AeronauticalReference: SignificantPoint
+
+```mermaid
+classDiagram
+class SignificantPointChoice
+<<choice>> SignificantPointChoice
+SignificantPointChoice --> AerodromeReference : +aerodromeReferencePoint
+SignificantPointChoice --> DesignatedPoint : +designatedPoint
+SignificantPointChoice --> Navaid : +navaid
+SignificantPointChoice --> GeographicalPosition : +position
+SignificantPointChoice --> RelativePoint : +relativePoint
+link SignificantPointChoice "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_SignificantPointChoiceType.html" "Go to XML definition"
+class RelativePoint
+RelativePoint : Bearing +bearing
+RelativePoint : Distance +distance
+RelativePoint : RelativePointExtension [0..*]+extension
+RelativePoint --> GeographicalPosition : [0..1]+position
+RelativePoint --> Navaid : +referencePoint
+link RelativePoint "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_RelativePointType.html" "Go to XML definition"
+class Navaid
+Navaid : NavaidExtension [0..*]+extension
+Navaid : NavaidDesignator +designator
+Navaid : HypertextReference [0..1]+href
+Navaid --> NavaidServiceType : [0..1]+navaidServiceType
+Navaid --> GeographicalPosition : [0..1]+position
+link Navaid "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidType.html" "Go to XML definition"
+class GeographicalPosition
+GeographicalPosition : LatLongPos +pos
+GeographicalPosition : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
+GeographicalPosition : GeographicalPositionExtension [0..*]+extension
+link GeographicalPosition "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_GeographicalPositionType.html" "Go to XML definition"
+class DesignatedPoint
+DesignatedPoint : DesignatedPointExtension [0..*]+extension
+DesignatedPoint : HypertextReference [0..1]+href
+DesignatedPoint : DesignatedPointDesignator +designator
+DesignatedPoint --> GeographicalPosition : [0..1]+position
+link DesignatedPoint "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html" "Go to XML definition"
+class AerodromeReference
+AerodromeReference : AerodromeReferenceExtension [0..*]+extension
+AerodromeReference : IataAerodromeDesignator [0..1]+iataDesignator
+AerodromeReference : LocationIndicator [0..1]+locationIndicator
+AerodromeReference : AerodromeName [0..1]+name
+AerodromeReference --> GeographicalPosition : [0..1]+referencePoint
+AerodromeReference : HypertextReference [0..1]+href
+link AerodromeReference "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_AerodromeReferenceType.html" "Go to XML definition"
+class NavaidServiceType
+<<enumeration>> NavaidServiceType
+NavaidServiceType : DF
+NavaidServiceType : DME
+NavaidServiceType : ILS
+NavaidServiceType : ILS_DME
+NavaidServiceType : LOC
+NavaidServiceType : LOC_DME
+NavaidServiceType : MKR
+NavaidServiceType : MLS
+NavaidServiceType : MLS_DME
+NavaidServiceType : NDB
+NavaidServiceType : NDB_DME
+NavaidServiceType : NDB_MKR
+NavaidServiceType : SDF
+NavaidServiceType : TACAN
+NavaidServiceType : TLS
+NavaidServiceType : VOR
+NavaidServiceType : VOR_DME
+NavaidServiceType : VORTAC
+link NavaidServiceType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_NavaidServiceTypeType.html" "Go to XML definition"
+```
+

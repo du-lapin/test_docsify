@@ -153,7 +153,7 @@ PostalAddress : TextCountryName [0..1]+countryName
 PostalAddress : TextAddress [0..1]+deliveryPoint
 PostalAddress : TextName [0..1]+postalCode
 class TelecomNetworkType
-<<enumeration>>
+<<enumeration>> TelecomNetworkType
 TelecomNetworkType : AFTN
 TelecomNetworkType : INTERNET
 link TelecomNetworkType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelecomNetworkTypeType.html" "Go to XML definition"

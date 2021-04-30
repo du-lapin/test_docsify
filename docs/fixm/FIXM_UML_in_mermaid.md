@@ -128,12 +128,38 @@ link NavaidServiceType "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documen
 ## Test 1
 ```mermaid
 classDiagram
-class Test
-Test : fixed#61;urn#58;ogc#58;def#58;crs#58;EPSG#58;#58;4326 +srsName
-link Test "https://fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_DesignatedPointType.html" "Go to XML definition"
+class TelephoneContact
+TelephoneContact : TelephoneContactExtension [0..*]+extension
+TelephoneContact : TextPhone [0..1]+facsimile
+TelephoneContact : TextPhone [0..1]+voice
+class ContactInformation
+ContactInformation : TextName [0..1]+name
+ContactInformation : ContactInformationExtension [0..*]+extension
+ContactInformation --> PostalAddress : [0..1]+address
+ContactInformation --> OnlineContact : [0..*]+onlineContact
+ContactInformation --> TelephoneContact : [0..1]+phoneFax
+ContactInformation : TextName [0..1]+title
+class OnlineContact
+OnlineContact : OnlineContactExtension [0..*]+extension
+OnlineContact : TextAddress [0..1]+email
+OnlineContact : TextAddress [0..1]+linkage
+OnlineContact --> NetworkChoice : [0..1]+network
+class PostalAddress
+PostalAddress : TextName [0..1]+administrativeArea
+PostalAddress : PostalAddressExtension [0..*]+extension
+PostalAddress : TextCity [0..1]+city
+PostalAddress : TextCountryCode [0..1]+countryCode
+PostalAddress : TextCountryName [0..1]+countryName
+PostalAddress : TextAddress [0..1]+deliveryPoint
+PostalAddress : TextName [0..1]+postalCode
 class TelecomNetworkType
-<<enumeration>> TelecomNetworkType
+<<enumeration>>
 TelecomNetworkType : AFTN
 TelecomNetworkType : INTERNET
+link TelecomNetworkType "https://www.fixm.aero/releases/FIXM-4.2.0/doc/schema_documentation/Fixm_TelecomNetworkTypeType.html" "Go to XML definition"
+class NetworkChoice
+<<choice>> NetworkChoice
+NetworkChoice : CharacterString +other
+NetworkChoice --> TelecomNetworkType : +type
 ```
 

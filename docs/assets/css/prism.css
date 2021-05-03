@@ -149,7 +149,6 @@ td {
 g.classGroup rect {
     fill: $nodeBkg;
     stroke: $nodeBorder;
-	width: 100%;
 	overflow-x: scroll;
 }
 

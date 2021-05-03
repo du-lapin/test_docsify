@@ -150,6 +150,7 @@ g.classGroup rect {
     fill: $nodeBkg;
     stroke: $nodeBorder;
 	overflow-x: scroll;
+	overflow-y: scroll;
 }
 
 }

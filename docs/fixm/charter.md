@@ -279,14 +279,43 @@ is_CR_required{Is CR needed?}
 
 INITIAL_STATE --> |A bug is reported by a member of the FIXM CoI| UNDER_DISCUSSION
 UNDER_DISCUSSION --> is_bug_valid
-is_bug_valid --> |NO, the bug is not confirmed by the FIXM CoI| CLOSED
+is_bug_valid --> |NO, the bug is not confirmed <br>by the FIXM CoI| CLOSED
 is_bug_valid --> |YES, the bug is confirmed, at least partly| CONFIRMED
 CONFIRMED --> is_CR_required
 is_CR_required --> |YES, a FIXM CR is required| CR_ISSUED
 is_CR_required --> |NO, the bug can be fixed without a CR<br> e.g. typo. Correction is integrated| CLOSED
-CR_ISSUED --> |A decision is made by the FIXM CCB about the CR| CLOSED
+CR_ISSUED --> |A decision is made by the <br>FIXM CCB about the CR| CLOSED
 CLOSED --> END_STATE
 
 style INITIAL_STATE fill:black,stroke:black,stroke-width:2px
 style END_STATE fill:white,stroke:black,stroke-width:2px
+```
+
+```mermaid
+graph TD
+INITIAL_STATE(( ))
+END_STATE(( ))
+PROPOSED([Proposed])
+CONSOLIDATED([Consolidated])
+SUBMITTED([Submitted])
+REJECTED([Rejected])
+APPROVED([Approved])
+IMPLEMENTED([Implemented])
+is_consolidation_wanted{Is bug valid?}
+is_CR_acceptable{Is CR needed?}
+should_CR_be_revisited{Should CR be revisited?}
+
+INITIAL_STATE --> |CR is drafted by a FIXM Stakeholder| PROPOSED
+PROPOSED --> is_consolidation_wanted
+is_consolidation_wanted --> |NO, consolidation is not considered necessary <br>and the CR is directly sent to <br>the FIXM CCB for decision| SUBMITTED
+is_consolidation_wanted --> |YES, CR is openly reviewed by the FIXM CoI <br>and amended accordingly| CONSOLIDATED
+CONSOLIDATED --> | | SUBMITTED
+SUBMITTED --> | | is_CR_acceptable
+is_CR_acceptable --> |YES| REJECTED
+is_CR_acceptable --> |NO| APPROVED
+APPROVED --> |The changes described in the CR are implemented in the master FIXM copy| IMPLEMENTED
+IMPLEMENTED --> END_STATE
+REJECTED --> should_CR_be_revisited
+should_CR_be_revisited --> |YES, the CR may eventually become accepatable pending changes| PROPOSED
+should_CR_be_revisited --> |NO, the CR is not aligned with the FIXM CCB vision for FIXM| END_STATE
 ```

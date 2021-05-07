@@ -289,10 +289,10 @@ CLOSED --> END_STATE
 
 style INITIAL_STATE fill:black,stroke:black,stroke-width:2px
 style END_STATE fill:white,stroke:black,stroke-width:2px
-style UNDER_DISCUSSION stroke-width:2px
-style CONFIRMED stroke-width:2px
-style CR_ISSUED stroke-width:2px
-style CLOSED stroke-width:2px
+style UNDER_DISCUSSION stroke-width:3px
+style CONFIRMED stroke-width:3px
+style CR_ISSUED stroke-width:3px
+style CLOSED stroke-width:3px
 ```
 
 ```mermaid

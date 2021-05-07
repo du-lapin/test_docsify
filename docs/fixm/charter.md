@@ -283,7 +283,7 @@ is_bug_valid --> |NO, the bug is not confirmed by the FIXM CoI| CLOSED
 is_bug_valid --> |YES, the bug is confirmed, at least partly| CONFIRMED
 CONFIRMED --> is_CR_required
 is_CR_required --> |YES, a FIXM CR is required| CR_ISSUED
-is_CR_required --> |NO, the bug can be fixed without a CR (e.g. typo). Correction is integrated| CLOSED
+is_CR_required --> |NO, the bug can be fixed without a CR<br> e.g. typo. Correction is integrated| CLOSED
 CR_ISSUED --> |A decision is made by the FIXM CCB about the CR| CLOSED
 CLOSED --> END_STATE
 

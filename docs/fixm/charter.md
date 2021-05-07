@@ -151,55 +151,6 @@ Current version : 1.2 (20-Apr-2018)
 
 5.3	The state diagram below indicates the main steps in the lifecycle of a FIXM Bug.
 
-> RECREATE DIAGRAM
-
-
-- A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
-- A FIXM Bug `UNDER DISCUSSION` might be considered inapplicable by the `FIXM CoI` if the related discussions conclude that the potential defects reported by the bug result from a misinterpretation or misunderstanding of an intentional design or wording. A FIXM Bug considered inapplicable by the `FIXM CoI` is `CLOSED` without any subsequent action.
-- A FIXM Bug `UNDER DISCUSSION` can be CONFIRMED by the `FIXM CoI`. Confirmation of a bug indicates that the potential error(s) reported by the bug, or at least some of them, are considered valid FIXM defects requiring corrections.
-- A `CONFIRMED` bug shall trigger the creation of one or more FIXM Change Request(s) so that the confirmed defects reported by the bug are solved in a future FIXM version – see chapters 5.4 to 5.7. An exception to the FIXM CR creation is foreseen, when the `CONFIRMED` bug is about typos or about minor, unintentional inconsistencies between FIXM components whose correction is straightforward, with no direct impact on implementers.
-- A `CONFIRMED` bug will be CLOSED when its resolution is completed, i.e. when the FIXM `CCB` makes a decision on the related FIXM CRs, or (exceptionally) when the minor corrections are directly integrated in the working FIXM components.
-
-### FIXM Change Requests
-5.4	Any proposed change to one or more FIXM components shall be formalised and documented in a FIXM Change Request (FIXM CR).
-
-5.5	The management of FIXM CRs is achieved using the FIXM Work Area which provides a shared repository of FIXM CRs and a default CR template to be used.
-
-5.6	The state diagram below indicates the main steps in the lifecycle of a FIXM CR.
-
-> RECREATE DIAGRAM
-
-- A FIXM CR can be issued at any time by any `FIXM stakeholder`.
-- It is recommended that a CR’s issuer consolidates his/her `PROPOSED` CR with the FIXM CoI. The CR consolidation can be achieved in various ways, including, but not limited to, ad-hoc teleconferences, discussions over the FIXM Community Discussion forum, or face-to-face meetings. The CR consolidation will maximise the chances that the CR is eventually approved by the FIXM `CCB`, but is not mandatory.
-- A CR that is `PROPOSED` or `CONSOLIDATED` by the FIXM CoI can be submitted to the `CCB` for endorsement by the CR’s issuer or, by delegation, by another FIXM stakeholder, or by the `CCB`S.
-- A CR that is `SUBMITTED` by the `FIXM CoI` will be assessed by the `CCB` during `CCB` meetings, as described in chapter 2.12. The assessment of a CR by the `CCB` is achieved in accordance with the rules for decision making process described in Article 2 – The Change Control Board (CCB).
-- A CR that is `APPROVED` by the `CCB` is implemented in the master FIXM copy by the `CCB`S.
-- A CR that is `REJECTED` by the `CCB` may be reopened again by any `FIXM stakeholder`, with a status set to `REPROPOSED`, so that the CR content can be reworked and submitted again to the FIXM `CCB`, as appropriate.
-
-5.7	FIXM `CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the `FIXM CoI`. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
-
-## Article 6 – Changes to the Change Management Charter
-
-7.1	This Charter may be changed at any time by the FIXM `CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“CCB”).
-
-## References
-[1]	FIXM Strategy v1.1
-
-## Definitions
-|||
-|:-|:-|
-|AIRM|ATM Information Reference Model|
-|AIXM|Aeronautical Information Exchange Model|
-|ASBU|Aviation System Block Upgrade|
-|ATMRPP|Air Traffic Management Requirements and Performance Panel|
-|`CCB`|Change Control Board|
-|`CCB`S|`CCB` Secretariat|
-|CoI|Community of Interest|
-|FF-ICE|Flight and Flow – Information for a Collaborative Environment|
-|FIXM|Flight Information Exchange Model|
-|ICAO|International Civil Aviation Organisation|
-
-
 ```mermaid
 stateDiagram
 state UNDER_DISCUSSION
@@ -227,4 +178,116 @@ is_CR_required --> CLOSED : NO, the bug can be fixed without a CR (e.g. typo). C
 is_CR_required --> CR_ISSUED : YES, a FIXM CR is required
 CR_ISSUED --> CLOSED : A decision is made by the FIXM CCB about the CR
 CLOSED --> [*]
+```
+
+- A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
+- A FIXM Bug `UNDER DISCUSSION` might be considered inapplicable by the `FIXM CoI` if the related discussions conclude that the potential defects reported by the bug result from a misinterpretation or misunderstanding of an intentional design or wording. A FIXM Bug considered inapplicable by the `FIXM CoI` is `CLOSED` without any subsequent action.
+- A FIXM Bug `UNDER DISCUSSION` can be CONFIRMED by the `FIXM CoI`. Confirmation of a bug indicates that the potential error(s) reported by the bug, or at least some of them, are considered valid FIXM defects requiring corrections.
+- A `CONFIRMED` bug shall trigger the creation of one or more FIXM Change Request(s) so that the confirmed defects reported by the bug are solved in a future FIXM version – see chapters 5.4 to 5.7. An exception to the FIXM CR creation is foreseen, when the `CONFIRMED` bug is about typos or about minor, unintentional inconsistencies between FIXM components whose correction is straightforward, with no direct impact on implementers.
+- A `CONFIRMED` bug will be CLOSED when its resolution is completed, i.e. when the FIXM `CCB` makes a decision on the related FIXM CRs, or (exceptionally) when the minor corrections are directly integrated in the working FIXM components.
+
+### FIXM Change Requests
+5.4	Any proposed change to one or more FIXM components shall be formalised and documented in a FIXM Change Request (FIXM CR).
+
+5.5	The management of FIXM CRs is achieved using the FIXM Work Area which provides a shared repository of FIXM CRs and a default CR template to be used.
+
+5.6	The state diagram below indicates the main steps in the lifecycle of a FIXM CR.
+
+
+```mermaid
+stateDiagram
+state PROPOSED
+state CONSOLIDATED
+state SUBMITTED
+state REJECTED
+state APPROVED
+state IMPLEMENTED
+state is_consolidation_wanted <<fork>>
+state is_CR_acceptable <<fork>>
+state should_CR_be_revisited <<fork>>
+
+note right of is_consolidation_wanted
+Does the CR issuer consider it necessary to consolidate the CR with the FIXM CCB?
+end note
+
+note left of is_CR_acceptable
+is the CR acceptable?
+end note
+
+note right of should_CR_be_revisited
+Should the CR be revisited by the FIXM CCB?
+end note
+
+[*] --> PROPOSED : CR is drafted by a FIXM Stakeholder
+PROPOSED --> is_consolidation_wanted
+is_consolidation_wanted --> SUBMITTED : NO, consolidation is not cosnidered necessary and the CR is directly sent to the FIXM CCB for decision
+is_consolidation_wanted --> CONSOLIDATED : YES, CR is openly reviwed by the FIXM CoI and amended accordingly
+CONSOLIDATED --> SUBMITTED : CR is formally sent to the FIXM CCB for decision
+SUBMITTED --> is_CR_acceptable
+is_CR_acceptable --> APPROVED : YES
+is_CR_acceptable --> REJECTED : NO
+APPROVED --> IMPLEMENTED : the changes described in the CR are implemented in the master FIXM copy
+IMPLEMENTED --> [*]
+REJECTED --> should_CR_be_revisited
+should_CR_be_revisited --> PROPOSED : YES, the CR may eventually become accepatable pending changes
+should_CR_be_revisited --> [*] : NO, the CR is not aligned with the FIXM CCB vision for FIXM
+```
+
+
+
+- A FIXM CR can be issued at any time by any `FIXM stakeholder`.
+- It is recommended that a CR’s issuer consolidates his/her `PROPOSED` CR with the FIXM CoI. The CR consolidation can be achieved in various ways, including, but not limited to, ad-hoc teleconferences, discussions over the FIXM Community Discussion forum, or face-to-face meetings. The CR consolidation will maximise the chances that the CR is eventually approved by the FIXM `CCB`, but is not mandatory.
+- A CR that is `PROPOSED` or `CONSOLIDATED` by the FIXM CoI can be submitted to the `CCB` for endorsement by the CR’s issuer or, by delegation, by another FIXM stakeholder, or by the `CCB`S.
+- A CR that is `SUBMITTED` by the `FIXM CoI` will be assessed by the `CCB` during `CCB` meetings, as described in chapter 2.12. The assessment of a CR by the `CCB` is achieved in accordance with the rules for decision making process described in Article 2 – The Change Control Board (CCB).
+- A CR that is `APPROVED` by the `CCB` is implemented in the master FIXM copy by the `CCB`S.
+- A CR that is `REJECTED` by the `CCB` may be reopened again by any `FIXM stakeholder`, with a status set to `REPROPOSED`, so that the CR content can be reworked and submitted again to the FIXM `CCB`, as appropriate.
+
+5.7	FIXM `CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the `FIXM CoI`. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
+
+## Article 6 – Changes to the Change Management Charter
+
+7.1	This Charter may be changed at any time by the FIXM `CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“CCB”).
+
+## References
+[1]	FIXM Strategy v1.1
+
+## Definitions
+|||
+|:-|:-|
+|AIRM|ATM Information Reference Model|
+|AIXM|Aeronautical Information Exchange Model|
+|ASBU|Aviation System Block Upgrade|
+|ATMRPP|Air Traffic Management Requirements and Performance Panel|
+|CCB|Change Control Board|
+|CCBS|CCB Secretariat|
+|CoI|Community of Interest|
+|FF-ICE|Flight and Flow – Information for a Collaborative Environment|
+|FIXM|Flight Information Exchange Model|
+|ICAO|International Civil Aviation Organisation|
+
+
+```mermaid
+graph TD
+INITIAL_STATE( )
+END_STATE( )
+UNDER_DISCUSSION
+CONFIRMED
+CR_ISSUED
+CLOSED
+is_bug_valid{ }
+is_CR_required{ }
+
+INITIAL_STATE --> |A bug is reported by a member of the FIXM CoI| UNDER_DISCUSSION(Under Discussion)
+UNDER_DISCUSSION --> is_bug_valid
+is_bug_valid --> |NO| CLOSED
+is_bug_valid --> |YES| CONFIRMED
+CONFIRMED --> is_CR_required
+is_CR_required --> |YES| CR_ISSUED
+is_CR_required --> |NO| CLOSED
+CR_ISSUED --> | | CLOSED
+CLOSED --> END_STATE
+
+style INITIAL_STATE fill:black,stroke:black,stroke-width:2px
+style END_STATE fill:white,stroke:black,stroke-width:2px
+
 ```

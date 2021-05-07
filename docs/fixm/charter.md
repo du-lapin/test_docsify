@@ -119,7 +119,7 @@ CCB Procedures
 
 3.3	Currently, there is no formal ICAO mandate, or remit, for an organisation to support the FIXM CCB and FIXM development. Thus, CCBS activities are currently being performed, voluntarily, by the FAA and EUROCONTROL. However, the CCBS role may be further supported by other members, or rotated amongst the FIXM stakeholders, subject to availability of financial and human resources.
 
-##Article 4 – The FIXM Community of Interest (“FIXM CoI”)
+## Article 4 – The FIXM Community of Interest (“FIXM CoI”)
 
 ### FIXM CoI Roles & Scope
 

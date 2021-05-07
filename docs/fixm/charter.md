@@ -302,7 +302,7 @@ REJECTED([Rejected])
 APPROVED([Approved])
 IMPLEMENTED([Implemented])
 is_consolidation_wanted{Is<br>consolidation<br>wanted?}
-is_CR_acceptable{Is<br>CR<br>acceptable?}
+is_CR_acceptable{Is CR<br>acceptable?}
 should_CR_be_revisited{Should<br>CR be<br>revisited?}
 
 INITIAL_STATE --> |CR is drafted by a FIXM Stakeholder| PROPOSED

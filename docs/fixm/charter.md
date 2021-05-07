@@ -9,13 +9,13 @@ Current version : 1.2 (20-Apr-2018)
 
 1.1	The evolution of the Flight Information Exchange Model (FIXM) shall be managed in the interest of the largest number of FIXM stakeholders (“Stakeholders”), including the accommodation of necessary extensions.
 
-1.2	A Change Control Board (“``CCB``”) with international participation is therefore established and will act under the provision of this Change Management Charter (“Charter”). The purpose of the ``CCB`` is to ensure that the strategic objectives for FIXM, described in the FIXM Strategy [1], are satisfied.
+1.2	A Change Control Board (`CCB`) with international participation is therefore established and will act under the provision of this Change Management Charter (“Charter”). The purpose of the `CCB` is to ensure that the strategic objectives for FIXM, described in the FIXM Strategy [1], are satisfied.
 
 1.3	The objective of this Charter is to support the information needs of the FIXM user community and of the larger aviation community through a disciplined, inclusive, and transparent approach to developing and approving new FIXM versions.
 
-## Article 2 – The Change Control Board (“``CCB``”)
+## Article 2 – The Change Control Board (CCB)
 
-### ``CCB`` Roles & Scope
+### CCB Roles & Scope
 
 2.1	The `CCB` is the body that decides on the evolution of FIXM. This includes:
 - The FIXM Strategy.
@@ -48,7 +48,7 @@ Current version : 1.2 (20-Apr-2018)
 - Monitors the evolutions in the ATM domain in order to trigger appropriate changes to FIXM.
 - Tracks the progress of FIXM change activities against the strategy.
  
-### `CCB` Membership
+### CCB Membership
 
 2.3	Whilst there is currently no formal ICAO mandate, or remit, for the change management of FIXM and its development, the `CCB` Members, as set up under this charter, aim to represent the ATM community, provide the change managament necessary for FIXM to evolve, and address FIXM-related technical and operational background needs.
 
@@ -99,45 +99,45 @@ Current version : 1.2 (20-Apr-2018)
 - `CCB` meetings can take place at any time during the year, depending on the `CCB` members’ availability. As a good practice, the `CCB` will organise monthly teleconferences scheduled for the third Thursday of each month.
 - `CCB` organisation will be controlled and performed by the `CCB` members with the support of a `CCB` Secretariat (see Article 3 – The `CCB` Secretariat (“`CCB`S”)), which remains under the direction of the `CCB`.
 
-## Article 3 – The `CCB` Secretariat (“`CCB`S”)
+## Article 3 – The `CCB` Secretariat (CCBS)
 
-### `CCB`S Roles & Scope
+### CCBS Roles & Scope
 
-3.1	The role of the `CCB` Secretariat is to support the `CCB` and FIXM evolution activities. The `CCB`S will provide the technical and human resources for:
+3.1	The role of the `CCB Secretariat` is to support the `CCB` and FIXM evolution activities. The `CCBS` will provide the technical and human resources for:
 - The management of FIXM Change Proposals;
 - The maintenance of the FIXM model(s) and associated documentation;
 - The maintenance of the online resources supporting the FIXM development (Web site, FIXM Work Area etc.).
 
-3.2	The `CCB`S shall:
+3.2	The `CCBS` shall:
 - Support and facilitate discussions at the `CCB` level with a view towards reaching consensus on needs and proposals;
 - Provide mediation for FIXM activity;
 - Support FIXM development;
 - Support the development of strategy and supporting items on behalf of the `CCB`;
 - Track the progress of FIXM change activities against strategy, and track other FIXM relevant ATM domain activities, in order to support the `CCB` role of monitoring and triggering appropriate changes to FIXM.
 
-### `CCB`S Membership
+### CCBS Membership
 
-3.3	Currently, there is no formal ICAO mandate, or remit, for an organisation to support the FIXM `CCB` and FIXM development. Thus, `CCB`S activities are currently being performed, voluntarily, by the FAA and EUROCONTROL. However, the `CCB`S role may be further supported by other members, or rotated amongst the FIXM stakeholders, subject to availability of financial and human resources.
+3.3	Currently, there is no formal ICAO mandate, or remit, for an organisation to support the FIXM `CCB` and FIXM development. Thus, `CCBS` activities are currently being performed, voluntarily, by the FAA and EUROCONTROL. However, the `CCBS` role may be further supported by other members, or rotated amongst the FIXM stakeholders, subject to availability of financial and human resources.
 
-## Article 4 – The FIXM Community of Interest (“FIXM CoI”)
+## Article 4 – The FIXM Community of Interest (FIXM CoI)
 
 ### FIXM CoI Roles & Scope
 
-4.1	The FIXM CoI designates the collaborative group of FIXM Stakeholders having an interest in FIXM and contributing to its evolution.
+4.1	The `FIXM CoI` designates the collaborative group of `FIXM Stakeholders` having an interest in FIXM and contributing to its evolution.
 
-4.2	The FIXM CoI openly issues, discusses, consolidates and submits change requests for improving FIXM.
+4.2	The `FIXM CoI` openly issues, discusses, consolidates and submits change requests for improving FIXM.
 
-4.3	The FIXM CoI can request FIXM `CCB` advice on any FIXM matters, at any time.
+4.3	The `FIXM CoI` can request FIXM `CCB` advice on any FIXM matters, at any time.
 
 ### FIXM CoI Membership
 
-4.4	The FIXM CoI is open to any organisation or individual having a verifiable interest in FIXM.  Joining the FIXM CoI is achieved by registering to the FIXM Work Area.
+4.4	The `FIXM CoI` is open to any organisation or individual having a verifiable interest in FIXM.  Joining the `FIXM CoI` is achieved by registering to the FIXM Work Area.
 
-4.5	Members of the FIXM CoI agree to respect the same rules of engagement and code of conduct described in chapters 2.7 to 2.9 when contributing to the FIXM development.
+4.5	Members of the `FIXM CoI` agree to respect the same rules of engagement and code of conduct described in chapters 2.7 to 2.9 when contributing to the FIXM development.
 
-4.6	The FIXM CoI is supported by an online Calendar, Document Repository, Action Lists, Bug reporting and Discussion Fora available on the FIXM Work Area.
+4.6	The `FIXM CoI` is supported by an online Calendar, Document Repository, Action Lists, Bug reporting and Discussion Fora available on the FIXM Work Area.
 
-4.7	Any registered member can leave the FIXM CoI at any time and without justification. This is achieved by unregistering to the FIXM Work Area.
+4.7	Any registered member can leave the `FIXM CoI` at any time and without justification. This is achieved by unregistering to the FIXM Work Area.
 
 ## Article 5 – Change Management Process
 
@@ -153,11 +153,11 @@ Current version : 1.2 (20-Apr-2018)
 
 > RECREATE DIAGRAM
 
-- A FIXM Bug can be reported at any time by any FIXM stakeholder. A FIXM Bug being reported is visible to the entire FIXM CoI and can be discussed by all the members of the FIXM CoI.
-- A FIXM Bug UNDER DISCUSSION might be considered inapplicable by the FIXM CoI if the related discussions conclude that the potential defects reported by the bug result from a misinterpretation or misunderstanding of an intentional design or wording. A FIXM Bug considered inapplicable by the FIXM CoI is CLOSED without any subsequent action.
-- A FIXM Bug UNDER DISCUSSION can be CONFIRMED by the FIXM CoI. Confirmation of a bug indicates that the potential error(s) reported by the bug, or at least some of them, are considered valid FIXM defects requiring corrections.
-- A CONFIRMED bug shall trigger the creation of one or more FIXM Change Request(s) so that the confirmed defects reported by the bug are solved in a future FIXM version – see chapters 5.4 to 5.7. An exception to the FIXM CR creation is foreseen, when the CONFIRMED bug is about typos or about minor, unintentional inconsistencies between FIXM components whose correction is straightforward, with no direct impact on implementers.
-- A CONFIRMED bug will be CLOSED when its resolution is completed, i.e. when the FIXM `CCB` makes a decision on the related FIXM CRs, or (exceptionally) when the minor corrections are directly integrated in the working FIXM components.
+- A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
+- A FIXM Bug `UNDER DISCUSSION` might be considered inapplicable by the `FIXM CoI` if the related discussions conclude that the potential defects reported by the bug result from a misinterpretation or misunderstanding of an intentional design or wording. A FIXM Bug considered inapplicable by the `FIXM CoI` is `CLOSED` without any subsequent action.
+- A FIXM Bug `UNDER DISCUSSION` can be CONFIRMED by the `FIXM CoI`. Confirmation of a bug indicates that the potential error(s) reported by the bug, or at least some of them, are considered valid FIXM defects requiring corrections.
+- A `CONFIRMED` bug shall trigger the creation of one or more FIXM Change Request(s) so that the confirmed defects reported by the bug are solved in a future FIXM version – see chapters 5.4 to 5.7. An exception to the FIXM CR creation is foreseen, when the `CONFIRMED` bug is about typos or about minor, unintentional inconsistencies between FIXM components whose correction is straightforward, with no direct impact on implementers.
+- A `CONFIRMED` bug will be CLOSED when its resolution is completed, i.e. when the FIXM `CCB` makes a decision on the related FIXM CRs, or (exceptionally) when the minor corrections are directly integrated in the working FIXM components.
 
 ### FIXM Change Requests
 5.4	Any proposed change to one or more FIXM components shall be formalised and documented in a FIXM Change Request (FIXM CR).
@@ -168,18 +168,18 @@ Current version : 1.2 (20-Apr-2018)
 
 > RECREATE DIAGRAM
 
-- A FIXM CR can be issued at any time by any FIXM stakeholder.
-- It is recommended that a CR’s issuer consolidates his/her PROPOSED CR with the FIXM CoI. The CR consolidation can be achieved in various ways, including, but not limited to, ad-hoc teleconferences, discussions over the FIXM Community Discussion forum, or face-to-face meetings. The CR consolidation will maximise the chances that the CR is eventually approved by the FIXM `CCB`, but is not mandatory.
-- A CR that is PROPOSED or CONSOLIDATED by the FIXM CoI can be submitted to the `CCB` for endorsement by the CR’s issuer or, by delegation, by another FIXM stakeholder, or by the `CCB`S.
-- A CR that is SUBMITTED by the FIXM CoI will be assessed by the `CCB` during `CCB` meetings, as described in chapter 2.12. The assessment of a CR by the `CCB` is achieved in accordance with the rules for decision making process described in Article 2 – The Change Control Board (“`CCB`”).
-- A CR that is APPROVED by the `CCB` is implemented in the master FIXM copy by the `CCB`S.
-- A CR that is REJECTED by the `CCB` may be reopened again by any FIXM stakeholder, with a status set to REPROPOSED, so that the CR content can be reworked and submitted again to the FIXM `CCB`, as appropriate.
+- A FIXM CR can be issued at any time by any `FIXM stakeholder`.
+- It is recommended that a CR’s issuer consolidates his/her `PROPOSED` CR with the FIXM CoI. The CR consolidation can be achieved in various ways, including, but not limited to, ad-hoc teleconferences, discussions over the FIXM Community Discussion forum, or face-to-face meetings. The CR consolidation will maximise the chances that the CR is eventually approved by the FIXM `CCB`, but is not mandatory.
+- A CR that is `PROPOSED` or `CONSOLIDATED` by the FIXM CoI can be submitted to the `CCB` for endorsement by the CR’s issuer or, by delegation, by another FIXM stakeholder, or by the `CCB`S.
+- A CR that is `SUBMITTED` by the `FIXM CoI` will be assessed by the `CCB` during `CCB` meetings, as described in chapter 2.12. The assessment of a CR by the `CCB` is achieved in accordance with the rules for decision making process described in Article 2 – The Change Control Board (CCB).
+- A CR that is `APPROVED` by the `CCB` is implemented in the master FIXM copy by the `CCB`S.
+- A CR that is `REJECTED` by the `CCB` may be reopened again by any `FIXM stakeholder`, with a status set to `REPROPOSED`, so that the CR content can be reworked and submitted again to the FIXM `CCB`, as appropriate.
 
-5.7	FIXM `CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the FIXM CoI. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
+5.7	FIXM `CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the `FIXM CoI`. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
 
 ## Article 6 – Changes to the Change Management Charter
 
-7.1	This Charter may be changed at any time by the FIXM `CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“`CCB`”).
+7.1	This Charter may be changed at any time by the FIXM `CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“CCB”).
 
 ## References
 [1]	FIXM Strategy v1.1

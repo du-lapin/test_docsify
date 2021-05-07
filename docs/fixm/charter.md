@@ -153,6 +153,7 @@ Current version : 1.2 (20-Apr-2018)
 
 > RECREATE DIAGRAM
 
+
 - A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
 - A FIXM Bug `UNDER DISCUSSION` might be considered inapplicable by the `FIXM CoI` if the related discussions conclude that the potential defects reported by the bug result from a misinterpretation or misunderstanding of an intentional design or wording. A FIXM Bug considered inapplicable by the `FIXM CoI` is `CLOSED` without any subsequent action.
 - A FIXM Bug `UNDER DISCUSSION` can be CONFIRMED by the `FIXM CoI`. Confirmation of a bug indicates that the potential error(s) reported by the bug, or at least some of them, are considered valid FIXM defects requiring corrections.
@@ -197,3 +198,33 @@ Current version : 1.2 (20-Apr-2018)
 |FF-ICE|Flight and Flow – Information for a Collaborative Environment|
 |FIXM|Flight Information Exchange Model|
 |ICAO|International Civil Aviation Organisation|
+
+
+```mermaid
+stateDiagram
+state UNDER_DISCUSSION
+state CONFIRMED
+state CR_ISSUED
+state CLOSED
+state is_bug_valid <<fork>>
+state is_CR_required <<fork>>
+
+note right of is_bug_valid
+Is the bug considered valid / applicable,
+ at least partly, by the FIXM CoI?
+end note
+
+note right of is_CR_required
+Is a FIXM CR required?
+end note
+
+[*] --> UNDER_DISCUSSION : A bug is reported by a member of the FIXM CoI
+UNDER_DISCUSSION --> is_bug_valid
+is_bug_valid --> CONFIRMED : YES, the bug is confirmed, at least partly
+is_bug_valid --> CLOSED : NO, the bug is not confirmed by the FIXM CoI
+CONFIRMED --> is_CR_required
+is_CR_required --> CLOSED : NO, the bug can be fixed without a CR (e.g. typo). Correction is integrated
+is_CR_required --> CR_ISSUED : YES, a FIXM CR is required
+CR_ISSUED --> CLOSED : A decision is made by the FIXM CCB about the CR
+CLOSED --> [*]
+```

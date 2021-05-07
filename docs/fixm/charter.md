@@ -301,9 +301,9 @@ SUBMITTED([Submitted])
 REJECTED([Rejected])
 APPROVED([Approved])
 IMPLEMENTED([Implemented])
-is_consolidation_wanted{Is bug valid?}
-is_CR_acceptable{Is CR needed?}
-should_CR_be_revisited{Should CR be revisited?}
+is_consolidation_wanted{Is<br>consolidation<br>wanted?}
+is_CR_acceptable{Is<br>CR<br>acceptable?}
+should_CR_be_revisited{Should<br>CR be<br>revisited?}
 
 INITIAL_STATE --> |CR is drafted by a FIXM Stakeholder| PROPOSED
 PROPOSED --> is_consolidation_wanted

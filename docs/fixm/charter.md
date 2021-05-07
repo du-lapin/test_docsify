@@ -268,26 +268,25 @@ should_CR_be_revisited --> [*] : NO, the CR is not aligned with the FIXM CCB vis
 
 ```mermaid
 graph TD
-INITIAL_STATE( )
-END_STATE( )
-UNDER_DISCUSSION
-CONFIRMED
-CR_ISSUED
-CLOSED
-is_bug_valid{ }
-is_CR_required{ }
+INITIAL_STATE(( ))
+END_STATE(( ))
+UNDER_DISCUSSION([Under Discussion])
+CONFIRMED([Confirmed])
+CR_ISSUED([CR Issued])
+CLOSED([Closed])
+is_bug_valid{Is bug valid?}
+is_CR_required{Is CR needed?}
 
-INITIAL_STATE --> |A bug is reported by a member of the FIXM CoI| UNDER_DISCUSSION(Under Discussion)
+INITIAL_STATE --> |A bug is reported by a member of the FIXM CoI| UNDER_DISCUSSION
 UNDER_DISCUSSION --> is_bug_valid
-is_bug_valid --> |NO| CLOSED
-is_bug_valid --> |YES| CONFIRMED
+is_bug_valid --> |NO, the bug is not confirmed by the FIXM CoI| CLOSED
+is_bug_valid --> |YES, the bug is confirmed, at least partly| CONFIRMED
 CONFIRMED --> is_CR_required
-is_CR_required --> |YES| CR_ISSUED
-is_CR_required --> |NO| CLOSED
-CR_ISSUED --> | | CLOSED
+is_CR_required --> |YES, a FIXM CR is required| CR_ISSUED
+is_CR_required --> |NO, the bug can be fixed without a CR (e.g. typo). Correction is integrated| CLOSED
+CR_ISSUED --> |A decision is made by the FIXM CCB about the CR| CLOSED
 CLOSED --> END_STATE
 
 style INITIAL_STATE fill:black,stroke:black,stroke-width:2px
 style END_STATE fill:white,stroke:black,stroke-width:2px
-
 ```

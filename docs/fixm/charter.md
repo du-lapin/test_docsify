@@ -308,14 +308,17 @@ should_CR_be_revisited{Should<br>CR be<br>revisited?}
 INITIAL_STATE --> |CR is drafted by a FIXM Stakeholder| PROPOSED
 PROPOSED --> is_consolidation_wanted
 is_consolidation_wanted --> |NO, consolidation is not considered necessary <br>and the CR is directly sent to <br>the FIXM CCB for decision| SUBMITTED
-is_consolidation_wanted --> |YES, CR is openly reviewed by the FIXM CoI <br>and amended accordingly| CONSOLIDATED
+is_consolidation_wanted --> |YES, CR is openly reviewed by <br>the FIXM CoI and amended accordingly| CONSOLIDATED
 CONSOLIDATED --> | | SUBMITTED
 SUBMITTED --> | | is_CR_acceptable
 is_CR_acceptable --> |YES| REJECTED
 is_CR_acceptable --> |NO| APPROVED
-APPROVED --> |The changes described in the CR are implemented in the master FIXM copy| IMPLEMENTED
+APPROVED --> |The changes described in the CR <br>are implemented in the master FIXM copy| IMPLEMENTED
 IMPLEMENTED --> END_STATE
 REJECTED --> should_CR_be_revisited
-should_CR_be_revisited --> |YES, the CR may eventually become accepatable pending changes| PROPOSED
-should_CR_be_revisited --> |NO, the CR is not aligned with the FIXM CCB vision for FIXM| END_STATE
+should_CR_be_revisited --> |YES, the CR may eventually <br>become accepatable <br>pending changes| PROPOSED
+should_CR_be_revisited --> |NO, the CR is not aligned <br>with the FIXM CCB vision <br>for FIXM| END_STATE
+
+style INITIAL_STATE fill:black,stroke:black,stroke-width:2px
+style END_STATE fill:white,stroke:black,stroke-width:2px
 ```

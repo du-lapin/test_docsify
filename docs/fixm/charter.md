@@ -7,17 +7,17 @@ Current version : 1.2 (20-Apr-2018)
 
 ## Article 1 – Objective
 
-1.1	The evolution of the Flight Information Exchange Model (FIXM) shall be managed in the interest of the largest number of `FIXM stakeholders` (“Stakeholders”), including the accommodation of necessary extensions.
+1.1 The evolution of the Flight Information Exchange Model (FIXM) shall be managed in the interest of the largest number of `FIXM stakeholders` (“Stakeholders”), including the accommodation of necessary extensions.
 
-1.2	A Change Control Board (`FIXM CCB`) with international participation is therefore established and will act under the provision of this Change Management Charter (“Charter”). The purpose of the `FIXM CCB` is to ensure that the strategic objectives for FIXM, described in the FIXM Strategy [1], are satisfied.
+1.2 A Change Control Board (`FIXM CCB`) with international participation is therefore established and will act under the provision of this Change Management Charter (“Charter”). The purpose of the `FIXM CCB` is to ensure that the strategic objectives for FIXM, described in the FIXM Strategy [1], are satisfied.
 
-1.3	The objective of this Charter is to support the information needs of the FIXM user community and of the larger aviation community through a disciplined, inclusive, and transparent approach to developing and approving new FIXM versions.
+1.3 The objective of this Charter is to support the information needs of the FIXM user community and of the larger aviation community through a disciplined, inclusive, and transparent approach to developing and approving new FIXM versions.
 
 ## Article 2 – The Change Control Board (CCB)
 
 ### CCB Roles & Scope
 
-2.1	The `FIXM CCB` is the body that decides on the evolution of FIXM. This includes:
+2.1 The `FIXM CCB` is the body that decides on the evolution of FIXM. This includes:
 - The FIXM Strategy.
 - The FIXM Change Management Charter (this document).
 - The FIXM Release Plan.
@@ -28,20 +28,20 @@ Current version : 1.2 (20-Apr-2018)
 
 *Note: www.FIXM.aero may contain additional pages capturing information relevant to individual stakeholder’s activities related to FIXM. Those pages will be clearly separated from the core part.*
 
-2.2	The `FIXM CCB`:
+2.2 The `FIXM CCB`:
 - Sets the main principles that will guide the FIXM development as described in the FIXM Strategy.
 - Has overall responsibility for the evolution of FIXM to: ensure core provisions from ICAO are met; maintain its components; and, ensure consistency with the FIXM Strategy.
 - Schedules the FIXM versions and manages the changes to be included in new versions.
 - Endorses, or rejects, proposals for FIXM. Chapter 2.1 provides the detailed list of FIXM items subject to `FIXM CCB` endorsement.
 - Considers proposals for inclusion in the FIXM specification and decides whether elements are included in the FIXM core, in coordination with the ATMRPP.
 - Supervises the development and endorses the release of verified extensions to FIXM core, in coordination with the ATMRPP.
-- Maintains an overview of FIXM extensions with the objectives of: (i)	Raising awareness about on-going FIXM extensions’ developments;(ii) Reconciling, to the extent possible, the content of overlapping extensions developed by different FIXM Stakeholders which would cover equivalent business needs; (iii) Optimising the movement of data elements between FIXM core and verified extensions.
+- Maintains an overview of FIXM extensions with the objectives of: (i) Raising awareness about on-going FIXM extensions’ developments;(ii) Reconciling, to the extent possible, the content of overlapping extensions developed by different FIXM Stakeholders which would cover equivalent business needs; (iii) Optimising the movement of data elements between FIXM core and verified extensions.
 - Endorses, or rejects, proposals for physical representations of the FIXM Logical Model to be recognised for common use.
 - Aims to ensure the transparency of change management for all Stakeholders.
 - Acts as de facto focal point for collecting the operational drivers for FIXM, unless other arrangements are decided.
 - Arbitrates the integration of the different Stakeholders’ needs and views.
 - If and when needed, prioritises FIXM Change Proposals and change activities.
-- When needed, issues and/or endorses FIXM evolution related items such as: (i)	Lists of new operational (data encoding) capabilities supported by new FIXM versions - enabling stakeholders to make informed decisions on their need to migrate an existing system to the new version or remain with the current version; (ii) A proposed implementation timeline - facilitating the synchronization between the different system upgrades to ensure interoperability; (iii) Mapping guidelines on changes between versions - in particular when changes to the model result in major restructuring of concept elements.
+- When needed, issues and/or endorses FIXM evolution related items such as: (i) Lists of new operational (data encoding) capabilities supported by new FIXM versions - enabling stakeholders to make informed decisions on their need to migrate an existing system to the new version or remain with the current version; (ii) A proposed implementation timeline - facilitating the synchronization between the different system upgrades to ensure interoperability; (iii) Mapping guidelines on changes between versions - in particular when changes to the model result in major restructuring of concept elements.
 - When needed, includes the release of formal conformance testing specifications, which enable an implementer to check and gain compliance with a FIXM version.
 - Establishes and maintains relations with similar groups, or bodies, that are responsible for the other ATM information domain models (AIM, MET, etc.) and for the ICAO ATM Information Reference Model (AIRM).
 - Reports regularly to ICAO ATMRPP on the progress of core developments and extensions, and consults on proposals for changes.
@@ -50,49 +50,49 @@ Current version : 1.2 (20-Apr-2018)
  
 ### CCB Membership
 
-2.3	Whilst there is currently no formal ICAO mandate, or remit, for the change management of FIXM and its development, the `FIXM CCB` Members, as set up under this charter, aim to represent the ATM community, provide the change managament necessary for FIXM to evolve, and address FIXM-related technical and operational background needs.
+2.3 Whilst there is currently no formal ICAO mandate, or remit, for the change management of FIXM and its development, the `FIXM CCB` Members, as set up under this charter, aim to represent the ATM community, provide the change managament necessary for FIXM to evolve, and address FIXM-related technical and operational background needs.
 
-2.4	It is recognised that the current `FIXM CCB` members’ participation is provided on a voluntary basis for the purpose of mutual, and wider, ATM benefit.
+2.4 It is recognised that the current `FIXM CCB` members’ participation is provided on a voluntary basis for the purpose of mutual, and wider, ATM benefit.
 
-2.5	As of the publication date of this document, the `FIXM CCB` is comprised by the following organisations: Airservices Australia, DSNA, EUROCONTROL, GCAA, IATA, ICCAIA, JCAB, NATS, NAV CANADA, the SESAR Joint Undertaking, and the US FAA.
+2.5 As of the publication date of this document, the `FIXM CCB` is comprised by the following organisations: Airservices Australia, DSNA, EUROCONTROL, GCAA, IATA, ICCAIA, JCAB, NATS, NAV CANADA, the SESAR Joint Undertaking, and the US FAA.
 
-2.6	The rules for expanding `FIXM CCB` membership are the following:
+2.6 The rules for expanding `FIXM CCB` membership are the following:
 - The `FIXM CCB` is by default inclusive; this is necessary in so far as FIXM is aimed to be a global standard- Until the first FIXM version is released that fully realises FF-ICE/1, `FIXM CCB` membership may be expanded only to new stakeholders that are in a position to provide direct sponsorship, including, but not limited to providing: resources to build the FIXM components over time; operational inputs to drive the FIXM development; and, improved synergies with relevant ATM communities of interest, particularly those identified in chapter 2.4 of the FIXM Strategy.
 - Once the first FIXM version is released that fully realises FF-ICE/1, FIXM `FIXM CCB` membership may be expanded, upon request, to any stakeholders that have a verifiable interest in the content and use of FIXM.
 
-2.7	`FIXM CCB` Members agree to respect the following code of conduct when participating in the `FIXM CCB` and other FIXM activities:
+2.7 `FIXM CCB` Members agree to respect the following code of conduct when participating in the `FIXM CCB` and other FIXM activities:
 - Behave courteously;
 - Convey messages accurately, succinctly, and with specificity;
 - Limit focus and discussions to FIXM topics;
 - Ensure that contribution is based on the global community needs, not the needs of the member's organisation;
 - Do not violate other members, or third parties, intellectual property rights.
 
-2.8	No `FIXM CCB` participant shall exert undue pressure in order to influence an outcome that has a bias to any one or more regions to the detriment of the objective of global interoperability.
+2.8 No `FIXM CCB` participant shall exert undue pressure in order to influence an outcome that has a bias to any one or more regions to the detriment of the objective of global interoperability.
 
-2.9	A `FIXM CCB` Member may be excluded for serious violation of the Charter. A proposal for exclusion must be brought forward by another `FIXM CCB` Member and will require consensus agreement of the remaining `FIXM CCB` members in order to take effect.
+2.9 A `FIXM CCB` Member may be excluded for serious violation of the Charter. A proposal for exclusion must be brought forward by another `FIXM CCB` Member and will require consensus agreement of the remaining `FIXM CCB` members in order to take effect.
 
-2.10	`FIXM CCB` Members are invited to inform the `FIXM CCB` about their plans for developing FIXM extensions and to share publicly these extensions using FIXM resources. A FIXM extension that is not registered in this way will not be considered by the `FIXM CCB` when carrying out the activities described in chapter 2.2f).
+2.10 `FIXM CCB` Members are invited to inform the `FIXM CCB` about their plans for developing FIXM extensions and to share publicly these extensions using FIXM resources. A FIXM extension that is not registered in this way will not be considered by the `FIXM CCB` when carrying out the activities described in chapter 2.2f).
  
 ### Decision making process
 
-2.11	`FIXM CCB` Members aim to actively support FIXM evolution activities and thus, members agree to participate in supporting the decision making processes.
+2.11 `FIXM CCB` Members aim to actively support FIXM evolution activities and thus, members agree to participate in supporting the decision making processes.
 
-2.12	Decisions will be made during `FIXM CCB` meetings (see 2.19 & 2.20).
+2.12 Decisions will be made during `FIXM CCB` meetings (see 2.19 & 2.20).
 
-2.13	Decision making in the `FIXM CCB` will be by consensus in order to represent the best interests of the ATM community through:
+2.13 Decision making in the `FIXM CCB` will be by consensus in order to represent the best interests of the ATM community through:
 - Unanimity, if all `FIXM CCB` members are present, spoken for, and in agreement;
 - Unanimous consent by members who have spoken and silence by the others;
 - Recording of a decision as a formal action with its associated due date. Lack of response by the due date is deemed concurrence.
 
-2.14	Objections shall be supported by clear arguments, in particular for business impacts, in order that other `FIXM CCB` Members may understand the objections and issues to be resolved. Current and immediate term operational reality should be considered as the prevailing arguments for the adoption of change proposals. Those that reflect future operational concepts will be subject to consideration of the operational needs and expectations, and may require further supporting evidence of concept agreement, or validation, for applicability at the international level. In such a case, the use of extensions as described in [1] should be considered as mitigation.
+2.14 Objections shall be supported by clear arguments, in particular for business impacts, in order that other `FIXM CCB` Members may understand the objections and issues to be resolved. Current and immediate term operational reality should be considered as the prevailing arguments for the adoption of change proposals. Those that reflect future operational concepts will be subject to consideration of the operational needs and expectations, and may require further supporting evidence of concept agreement, or validation, for applicability at the international level. In such a case, the use of extensions as described in [1] should be considered as mitigation.
 
-2.15	In the absence of consensus, the `FIXM CCB` will escalate the problem to the ICAO ATMRPP for resolution.
+2.15 In the absence of consensus, the `FIXM CCB` will escalate the problem to the ICAO ATMRPP for resolution.
 
 ### CCB Procedures
 
-2.16	The working language of `FIXM CCB` is (Oxford Dictionary) English.
+2.16 The working language of `FIXM CCB` is (Oxford Dictionary) English.
 
-2.17	All `FIXM CCB` activities will be conducted using on-line tools to which all `FIXM CCB` Members shall have access, including: 
+2.17 All `FIXM CCB` activities will be conducted using on-line tools to which all `FIXM CCB` Members shall have access, including: 
 - The distribution list, FIXM.CCB@eurocontrol.int, which is used for internal `FIXM CCB` communication and serves as the primary means for external stakeholders to contact the `FIXM CCB` members. This distribution list will support the decision making-process (see 2.12).
 - The FIXM CCB Repository, FIXM CCB Action Lists and FIXM CCB Discussion Forum on the FIXM Work Area. The FIXM CCB Repository is used for storing the main `FIXM CCB` materials (minutes of meetings, working documents, etc.).
 - In order to effectively apply the provisions of this Charter, a change management process is put in place and supported via on-line tools. It is configured in order to ensure that FIXM change proposals are publicly and transparently captured, analysed and eventually submitted to the `FIXM CCB` for resolution. The change management process is described in Article 5 – Change Management Process.
@@ -104,12 +104,12 @@ Current version : 1.2 (20-Apr-2018)
 
 ### CCBS Roles & Scope
 
-3.1	The role of the `FIXM CCB Secretariat` is to support the `FIXM CCB` and FIXM evolution activities. The `FIXM CCBS` will provide the technical and human resources for:
+3.1 The role of the `FIXM CCB Secretariat` is to support the `FIXM CCB` and FIXM evolution activities. The `FIXM CCBS` will provide the technical and human resources for:
 - The management of FIXM Change Proposals;
 - The maintenance of the FIXM model(s) and associated documentation;
 - The maintenance of the online resources supporting the FIXM development (Web site, FIXM Work Area etc.).
 
-3.2	The `FIXM CCBS` shall:
+3.2 The `FIXM CCBS` shall:
 - Support and facilitate discussions at the `FIXM CCB` level with a view towards reaching consensus on needs and proposals;
 - Provide mediation for FIXM activity;
 - Support FIXM development;
@@ -118,39 +118,39 @@ Current version : 1.2 (20-Apr-2018)
 
 ### CCBS Membership
 
-3.3	Currently, there is no formal ICAO mandate, or remit, for an organisation to support the `FIXM CCB` and FIXM development. Thus, `FIXM CCBS` activities are currently being performed, voluntarily, by the FAA and EUROCONTROL. However, the `FIXM CCBS` role may be further supported by other members, or rotated amongst the FIXM stakeholders, subject to availability of financial and human resources.
+3.3 Currently, there is no formal ICAO mandate, or remit, for an organisation to support the `FIXM CCB` and FIXM development. Thus, `FIXM CCBS` activities are currently being performed, voluntarily, by the FAA and EUROCONTROL. However, the `FIXM CCBS` role may be further supported by other members, or rotated amongst the FIXM stakeholders, subject to availability of financial and human resources.
 
 ## Article 4 – The FIXM Community of Interest (FIXM CoI)
 
 ### FIXM CoI Roles & Scope
 
-4.1	The `FIXM CoI` designates the collaborative group of `FIXM Stakeholders` having an interest in FIXM and contributing to its evolution.
+4.1 The `FIXM CoI` designates the collaborative group of `FIXM Stakeholders` having an interest in FIXM and contributing to its evolution.
 
-4.2	The `FIXM CoI` openly issues, discusses, consolidates and submits change requests for improving FIXM.
+4.2 The `FIXM CoI` openly issues, discusses, consolidates and submits change requests for improving FIXM.
 
-4.3	The `FIXM CoI` can request `FIXM CCB` advice on any FIXM matters, at any time.
+4.3 The `FIXM CoI` can request `FIXM CCB` advice on any FIXM matters, at any time.
 
 ### FIXM CoI Membership
 
-4.4	The `FIXM CoI` is open to any organisation or individual having a verifiable interest in FIXM.  Joining the `FIXM CoI` is achieved by registering to the FIXM Work Area.
+4.4 The `FIXM CoI` is open to any organisation or individual having a verifiable interest in FIXM.  Joining the `FIXM CoI` is achieved by registering to the FIXM Work Area.
 
-4.5	Members of the `FIXM CoI` agree to respect the same rules of engagement and code of conduct described in chapters 2.7 to 2.9 when contributing to the FIXM development.
+4.5 Members of the `FIXM CoI` agree to respect the same rules of engagement and code of conduct described in chapters 2.7 to 2.9 when contributing to the FIXM development.
 
-4.6	The `FIXM CoI` is supported by an online Calendar, Document Repository, Action Lists, Bug reporting and Discussion Fora available on the FIXM Work Area.
+4.6 The `FIXM CoI` is supported by an online Calendar, Document Repository, Action Lists, Bug reporting and Discussion Fora available on the FIXM Work Area.
 
-4.7	Any registered member can leave the `FIXM CoI` at any time and without justification. This is achieved by unregistering to the FIXM Work Area.
+4.7 Any registered member can leave the `FIXM CoI` at any time and without justification. This is achieved by unregistering to the FIXM Work Area.
 
 ## Article 5 – Change Management Process
 
-5.1	A change management process is implemented for FIXM and supported by the FIXM Work Area. It is articulated around two concepts: FIXM bugs and FIXM Change Requests:
+5.1 A change management process is implemented for FIXM and supported by the FIXM Work Area. It is articulated around two concepts: FIXM bugs and FIXM Change Requests:
 - A FIXM bug is a potential error observed in one or more FIXM components. FIXM bugs always concern a FIXM release that is publicly available (official version, BETA or RC). FIXM bugs do not address, for instance, proposals for new FIXM content.
 - A FIXM Change Request is a document expressing a formal wish to modify the content of one or more FIXM components. The modifications proposed by a FIXM Change Request can be of any type: addition, modification and/or deprecation of model elements, conceptual changes to FIXM, introduction of new physical realisations, etc.
 
 ### FIXM Bugs
 
-5.2	The reporting and management of FIXM bugs is achieved using the FIXM Work Area which provides a shared repository of bugs and a supporting discussion forum.
+5.2 The reporting and management of FIXM bugs is achieved using the FIXM Work Area which provides a shared repository of bugs and a supporting discussion forum.
 
-5.3	The state diagram below indicates the main steps in the lifecycle of a FIXM Bug.
+5.3 The state diagram below indicates the main steps in the lifecycle of a FIXM Bug.
 
 ```mermaid
 graph TD
@@ -188,11 +188,11 @@ style CLOSED stroke-width:3px
 - A `CONFIRMED` bug will be CLOSED when its resolution is completed, i.e. when the `FIXM CCB` makes a decision on the related FIXM CRs, or (exceptionally) when the minor corrections are directly integrated in the working FIXM components.
 
 ### FIXM Change Requests
-5.4	Any proposed change to one or more FIXM components shall be formalised and documented in a FIXM Change Request (FIXM CR).
+5.4 Any proposed change to one or more FIXM components shall be formalised and documented in a FIXM Change Request (FIXM CR).
 
-5.5	The management of FIXM CRs is achieved using the FIXM Work Area which provides a shared repository of FIXM CRs and a default CR template to be used.
+5.5 The management of FIXM CRs is achieved using the FIXM Work Area which provides a shared repository of FIXM CRs and a default CR template to be used.
 
-5.6	The state diagram below indicates the main steps in the lifecycle of a FIXM CR.
+5.6 The state diagram below indicates the main steps in the lifecycle of a FIXM CR.
 
 ```mermaid
 graph TD
@@ -239,14 +239,14 @@ style IMPLEMENTED stroke-width:3px
 - A CR that is `APPROVED` by the `FIXM CCB` is implemented in the master FIXM copy by the `FIXM CCBS`.
 - A CR that is `REJECTED` by the `FIXM CCBS` may be reopened again by any `FIXM stakeholder`, with a status set to `REPROPOSED`, so that the CR content can be reworked and submitted again to the `FIXM CCB`, as appropriate.
 
-5.7	`FIXM CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the `FIXM CoI`. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
+5.7 `FIXM CCB` advice about a CR can be requested at any time, for instance if the consolidation of a CR proves challenging because of diverging opinions within the `FIXM CoI`. This particular case, which is expected to be exceptional, is not reflected in the state diagram above.
 
 ## Article 6 – Changes to the Change Management Charter
 
-7.1	This Charter may be changed at any time by the `FIXM CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“CCB”).
+7.1 This Charter may be changed at any time by the `FIXM CCB`, in compliance with the Decision Making Process described in chapter Article 2 – The Change Control Board (“CCB”).
 
 ## References
-[1]	FIXM Strategy v1.1
+[1] FIXM Strategy v1.1
 
 ## Definitions
 |||

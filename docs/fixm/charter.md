@@ -95,10 +95,10 @@ Current version : 1.2 (20-Apr-2018)
 2.17 All `FIXM CCB` activities will be conducted using on-line tools to which all `FIXM CCB` Members shall have access, including: 
 - The distribution list, FIXM.CCB@eurocontrol.int, which is used for internal `FIXM CCB` communication and serves as the primary means for external stakeholders to contact the `FIXM CCB` members. This distribution list will support the decision making-process (see 2.12).
 - The FIXM CCB Repository, FIXM CCB Action Lists and FIXM CCB Discussion Forum on the FIXM Work Area. The FIXM CCB Repository is used for storing the main `FIXM CCB` materials (minutes of meetings, working documents, etc.).
-- In order to effectively apply the provisions of this Charter, a change management process is put in place and supported via on-line tools. It is configured in order to ensure that FIXM change proposals are publicly and transparently captured, analysed and eventually submitted to the `FIXM CCB` for resolution. The change management process is described in [Article 5 – Change Management Process](charter?id=article-5-change-management-process).
+- In order to effectively apply the provisions of this Charter, a change management process is put in place and supported via on-line tools. It is configured in order to ensure that FIXM change proposals are publicly and transparently captured, analysed and eventually submitted to the `FIXM CCB` for resolution. The change management process is described in [Article 5 – Change Management Process](fixm/charter?id=article-5-change-management-process).
 - Dedicated `FIXM CCB` meetings should be organised on a regular basis. A `FIXM CCB` meeting can consist of a face-to-face meeting (for instance, held in conjunction with other FIXM events), a teleconference, or an email discussion about a specific topic using the full `FIXM CCB` distribution list. The conclusions of such meetings must be recorded in order to capture individual issues/change proposals.
 - `FIXM CCB` meetings can take place at any time during the year, depending on the `FIXM CCB` members’ availability. As a good practice, the `FIXM CCB` will organise monthly teleconferences scheduled for the third Thursday of each month.
-- `FIXM CCB` organisation will be controlled and performed by the `FIXM CCB` members with the support of a `FIXM CCB Secretariat`  (see [Article 3 – The CCB Secretariat (CCBS)](charter?id=article-3-the-ccb-secretariat-ccbs)), which remains under the direction of the `FIXM CCB`.
+- `FIXM CCB` organisation will be controlled and performed by the `FIXM CCB` members with the support of a `FIXM CCB Secretariat`  (see [Article 3 – The CCB Secretariat (CCBS)](fixm/charter?id=article-3-the-ccb-secretariat-ccbs)), which remains under the direction of the `FIXM CCB`.
 
 ## Article 3 – The CCB Secretariat (CCBS)
 
@@ -243,7 +243,7 @@ style IMPLEMENTED stroke-width:3px
 
 ## Article 6 – Changes to the Change Management Charter
 
-7.1 This Charter may be changed at any time by the `FIXM CCB`, in compliance with the Decision Making Process described in chapter [Article 2 – The Change Control Board (CCB)](charter?id=article-2-the-change-control-board-ccb).
+7.1 This Charter may be changed at any time by the `FIXM CCB`, in compliance with the Decision Making Process described in chapter [Article 2 – The Change Control Board (CCB)](fixm/charter?id=article-2-the-change-control-board-ccb).
 
 ## References
 [1] FIXM Strategy v1.1

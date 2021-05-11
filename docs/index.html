@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
   <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
 
+  <!-- Dark mode -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/>
 
 </head>
 <body>
@@ -59,6 +61,21 @@
         crossChapter: true,
         crossChapterText: true
       }
+
+      // DARK MODE SETTINGS
+      // -----------------------------------------------------------------     
+      darkMode: {
+        dark: {
+          background: "",
+          toggleBtnBg: "",
+          textColor: ""
+          },
+        light: {
+          background: "",
+          toggleBtnBg: "",
+          textColor: ""
+          }
+      }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -86,10 +103,14 @@
   
   <!-- Beta announcement -->
   <script src="//cdn.jsdelivr.net/npm/docsify-corner/dist/docsify-corner.js"></script>
-
+  
+  <!-- Support mermaid diagrams -->
 	<script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
-	<script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"> 
+	<script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
 	<script>mermaid.initialize({ startOnLoad: true, flowchart: { useMaxWidth: false } });</script>
+
+  <!-- dark mode -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
 
   <script src="assets/js/prism.js"></script>
 </body>

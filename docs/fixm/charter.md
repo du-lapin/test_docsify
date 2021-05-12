@@ -188,7 +188,7 @@ style CLOSED stroke-width:3px
 
 click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug" _blank
 
-subgraph click_here_to_report_a_bug [Click here <br>to report <br>a bug]
+subgraph click_here_to_report_a_bug [Click to report bug]
 INITIAL_STATE
 end click_here_to_report_a_bug
 ```

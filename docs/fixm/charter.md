@@ -180,7 +180,7 @@ style CONFIRMED stroke-width:3px
 style CR_ISSUED stroke-width:3px
 style CLOSED stroke-width:3px
 
-click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug"
+click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug" _blank
 ```
 
 - A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
@@ -233,7 +233,7 @@ style REJECTED stroke-width:3px
 style APPROVED stroke-width:3px
 style IMPLEMENTED stroke-width:3px
 
-click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Change%20Requests/Forms/AllItems.aspx" "Click to issue a new change request"
+click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Change%20Requests/Forms/AllItems.aspx" "Click to issue a new change request" _blank
 ```
 
 - A FIXM CR can be issued at any time by any `FIXM stakeholder`.

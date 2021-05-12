@@ -187,6 +187,10 @@ style CR_ISSUED stroke-width:3px
 style CLOSED stroke-width:3px
 
 click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug" _blank
+
+subgraph start [Click here to report a bug]
+INITIAL_STATE
+end start
 ```
 
 - A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.

@@ -2,7 +2,7 @@
 
 This page formalizes the organization of the FIXM community and its operating procedures.
 
-> Current version : content based on v.1.2 (20-Apr-2018), with editorial changes to leverage the capabilities of markdown.
+> UNDER EVALUATION : content is based on v.1.2 (20-Apr-2018) of the charter, with editorial changes to leverage the capabilities of markdown.
 
 
 ## Article 1 – Objective

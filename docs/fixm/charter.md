@@ -186,7 +186,7 @@ style CONFIRMED stroke-width:3px
 style CR_ISSUED stroke-width:3px
 style CLOSED stroke-width:3px
 
-subgraph click_here_to_report_a_bug [Click here to report bug]
+subgraph click_here_to_report_a_bug [ ]
 INITIAL_STATE
 CLICK_HERE>Click here to report a new bug]
 end click_here_to_report_a_bug

@@ -2,7 +2,7 @@
 
 ## Encoding an FF-ICE Basic Route in FIXM
 
-| **#** | **Encoding Rule** | **Applies to** |
+| **#** | **Business Rule desription** | **Applies to**<br>**FIXM model element** |
 |:-|:-|:-|
 | ffice_basic_rte_1 | An FF-ICE basic route ***shall*** include a series of `<fx:element>` in the order in which they will be flown. | `<fx:desired>` `<fx:filed>` `<fx:ranked>` |
 | ffice_basic_rte_2 | Each `<fx:element>` of an FF-ICE basic route ***shall*** correspond to a point and route element that would be present in an FPL field 15c. | `<fx:element>` |

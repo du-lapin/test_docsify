@@ -53,7 +53,7 @@ This page formalizes the organization of the FIXM community and its operating pr
 - Reports regularly to ICAO ATMRPP on the progress of core developments and extensions, and consults on proposals for changes.
 - Monitors the evolutions in the ATM domain in order to trigger appropriate changes to FIXM.
 - Tracks the progress of FIXM change activities against the strategy.
- 
+
 ### CCB Membership
 
 2.3 Whilst there is currently no formal ICAO mandate, or remit, for the change management of FIXM and its development, the `FIXM CCB` Members, as set up under this charter, aim to represent the ATM community, provide the change managament necessary for FIXM to evolve, and address FIXM-related technical and operational background needs.

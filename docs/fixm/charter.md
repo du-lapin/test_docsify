@@ -35,13 +35,19 @@ This page formalizes the organization of the FIXM community and its operating pr
 - Endorses, or rejects, proposals for FIXM. Chapter 2.1 provides the detailed list of FIXM items subject to `FIXM CCB` endorsement.
 - Considers proposals for inclusion in the FIXM specification and decides whether elements are included in the FIXM core, in coordination with the ATMRPP.
 - Supervises the development and endorses the release of verified extensions to FIXM core, in coordination with the ATMRPP.
-- Maintains an overview of FIXM extensions with the objectives of: (i) Raising awareness about on-going FIXM extensions’ developments;(ii) Reconciling, to the extent possible, the content of overlapping extensions developed by different FIXM Stakeholders which would cover equivalent business needs; (iii) Optimising the movement of data elements between FIXM core and verified extensions.
+- Maintains an overview of FIXM extensions with the objectives of: 
+  - Raising awareness about on-going FIXM extensions’ developments;
+  - Reconciling, to the extent possible, the content of overlapping extensions developed by different FIXM Stakeholders which would cover equivalent business needs; 
+  - Optimising the movement of data elements between FIXM core and verified extensions.
 - Endorses, or rejects, proposals for physical representations of the FIXM Logical Model to be recognised for common use.
 - Aims to ensure the transparency of change management for all Stakeholders.
 - Acts as de facto focal point for collecting the operational drivers for FIXM, unless other arrangements are decided.
 - Arbitrates the integration of the different Stakeholders’ needs and views.
 - If and when needed, prioritises FIXM Change Proposals and change activities.
-- When needed, issues and/or endorses FIXM evolution related items such as: (i) Lists of new operational (data encoding) capabilities supported by new FIXM versions - enabling stakeholders to make informed decisions on their need to migrate an existing system to the new version or remain with the current version; (ii) A proposed implementation timeline - facilitating the synchronization between the different system upgrades to ensure interoperability; (iii) Mapping guidelines on changes between versions - in particular when changes to the model result in major restructuring of concept elements.
+- When needed, issues and/or endorses FIXM evolution related items such as: 
+  - Lists of new operational (data encoding) capabilities supported by new FIXM versions - enabling stakeholders to make informed decisions on their need to migrate an existing system to the new version or remain with the current version;
+  - A proposed implementation timeline - facilitating the synchronization between the different system upgrades to ensure interoperability; 
+  - Mapping guidelines on changes between versions - in particular when changes to the model result in major restructuring of concept elements.
 - When needed, includes the release of formal conformance testing specifications, which enable an implementer to check and gain compliance with a FIXM version.
 - Establishes and maintains relations with similar groups, or bodies, that are responsible for the other ATM information domain models (AIM, MET, etc.) and for the ICAO ATM Information Reference Model (AIRM).
 - Reports regularly to ICAO ATMRPP on the progress of core developments and extensions, and consults on proposals for changes.

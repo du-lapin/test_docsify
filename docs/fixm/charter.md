@@ -169,7 +169,7 @@ CLOSED([Closed])
 is_bug_valid{Is bug valid?}
 is_CR_required{Is CR needed?}
 
-INITIAL_STATE --> |A bug is reported by a member of the FIXM CoI| UNDER_DISCUSSION
+INITIAL_STATE --> |A bug is reported by <br>a member of the FIXM CoI| UNDER_DISCUSSION
 UNDER_DISCUSSION --> is_bug_valid
 is_bug_valid --> |NO, the bug is not confirmed <br>by the FIXM CoI| CLOSED
 is_bug_valid --> |YES, the bug is confirmed, at least partly| CONFIRMED
@@ -186,11 +186,12 @@ style CONFIRMED stroke-width:3px
 style CR_ISSUED stroke-width:3px
 style CLOSED stroke-width:3px
 
-click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug" _blank
-
-subgraph click_here_to_report_a_bug [Click to report bug]
+subgraph click_here_to_report_a_bug [Click here to report bug]
 INITIAL_STATE
+CLICK_HERE>Click here to report a new bug]
 end click_here_to_report_a_bug
+
+click CLICK_HERE "https://ost.eurocontrol.int/sites/FIXM/Lists/Bug%20reports/AllItems.aspx" "Click to report a new bug" _blank
 ```
 
 - A FIXM Bug can be reported at any time by any `FIXM stakeholder`. A FIXM Bug being reported is visible to the entire `FIXM CoI` and can be discussed by all the members of the `FIXM CoI`.
@@ -243,7 +244,12 @@ style REJECTED stroke-width:3px
 style APPROVED stroke-width:3px
 style IMPLEMENTED stroke-width:3px
 
-click INITIAL_STATE "https://ost.eurocontrol.int/sites/FIXM/Change%20Requests/Forms/AllItems.aspx" "Click to issue a new change request" _blank
+subgraph click_here_to_submit_a_cr [ ]
+INITIAL_STATE
+CLICK_HERE>Click here to submit a new FIXM CR]
+end click_here_to_submit_a_cr
+
+click CLICK_HERE "https://ost.eurocontrol.int/sites/FIXM/Change%20Requests/Forms/AllItems.aspx" "Click to issue a new change request" _blank
 ```
 
 - A FIXM CR can be issued at any time by any `FIXM stakeholder`.
